@@ -729,14 +729,12 @@
     .apertura-video {
       position: relative;
       width: 100%;
-      aspect-ratio: 4 / 3;
       overflow: hidden;
       background: #0f0f1e;
     }
     .apertura-video img {
       width: 100%;
-      height: 100%;
-      object-fit: cover;
+      height: auto;
       display: block;
     }
 
@@ -1111,6 +1109,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
+      z-index: 505;
     }
     .lightbox-img-wrapper img {
       max-width: 85vw;
@@ -1184,8 +1183,8 @@
       top: 50%;
       transform: translateY(-50%);
       width: 50px; height: 50px;
-      background: rgba(253, 246, 236, 0.08);
-      border: 1px solid rgba(253, 246, 236, 0.12);
+      background: rgba(253, 246, 236, 0.15);
+      border: 1px solid rgba(253, 246, 236, 0.2);
       border-radius: 50%;
       color: var(--cream);
       font-size: 1.2rem;
@@ -1194,6 +1193,7 @@
       align-items: center;
       justify-content: center;
       transition: background 0.25s, transform 0.2s;
+      z-index: 520;
     }
     .lightbox-prev { left: 1.5rem; }
     .lightbox-next { right: 1.5rem; }
@@ -1232,16 +1232,18 @@
     /* Responsive lightbox */
     @media (max-width: 900px) {
       .lightbox-img-wrapper img {
-        max-width: 95vw;
-        max-height: 70vh;
+        max-width: 85vw;
+        max-height: 65vh;
       }
       .lightbox-prev,
       .lightbox-next {
-        width: 40px; height: 40px;
+        width: 44px; height: 44px;
         font-size: 1rem;
+        background: rgba(212, 162, 69, 0.4);
+        border: 1px solid rgba(253, 246, 236, 0.3);
       }
-      .lightbox-prev { left: 0.8rem; }
-      .lightbox-next { right: 0.8rem; }
+      .lightbox-prev { left: 0.5rem; }
+      .lightbox-next { right: 0.5rem; }
       .lightbox-caption {
         font-size: 0.78rem;
         bottom: 1.2rem;
@@ -2298,6 +2300,26 @@
     if (e.key === 'ArrowLeft') lbGoTo(-1);
     if (e.key === 'ArrowRight') lbGoTo(1);
   });
+
+  // Swipe táctil para navegar en móvil
+  let touchStartX = 0;
+  let touchEndX = 0;
+
+  lightbox.addEventListener('touchstart', (e) => {
+    touchStartX = e.changedTouches[0].screenX;
+  }, { passive: true });
+
+  lightbox.addEventListener('touchend', (e) => {
+    touchEndX = e.changedTouches[0].screenX;
+    const diff = touchStartX - touchEndX;
+    if (Math.abs(diff) > 50) { // Mínimo 50px de swipe
+      if (diff > 0) {
+        lbGoTo(1);  // Swipe izquierda → siguiente
+      } else {
+        lbGoTo(-1); // Swipe derecha → anterior
+      }
+    }
+  }, { passive: true });
 
   // ─── 5. SERVICIOS → PRE-SELECCIÓN EN FORMULARIO ───
   // Al hacer click en una card, pre-llena el select del formulario
