@@ -239,7 +239,6 @@
       opacity: 1;
       transform: translate(0, 0);
     }
-    /* Stagger delays para elementos en grid */
     .reveal-delay-1 { transition-delay: 0.1s; }
     .reveal-delay-2 { transition-delay: 0.2s; }
     .reveal-delay-3 { transition-delay: 0.3s; }
@@ -247,9 +246,6 @@
 
     /* ══════════════════════════════════════════
        NAVEGACIÓN MEJORADA
-       - Cambia estilo al hacer scroll
-       - Indicador activo por sección
-       - Menú hamburguesa en móvil
        ══════════════════════════════════════════ */
     nav {
       position: fixed; top: 0; left: 0; right: 0; z-index: 100;
@@ -261,15 +257,12 @@
       border-bottom: 1px solid transparent;
       transition: padding 0.35s ease, background 0.35s ease, border-color 0.35s ease, box-shadow 0.35s ease;
     }
-
-    /* Estado "scrolled" — se activa con JS al bajar */
     nav.scrolled {
       padding: 0.2rem 3rem;
       background: rgba(253, 246, 236, 0.97);
       border-bottom: 1px solid var(--warm);
       box-shadow: 0 2px 20px rgba(26, 26, 46, 0.08);
     }
-
     .nav-logo {
       display: flex;
       align-items: center;
@@ -284,8 +277,6 @@
     nav.scrolled .nav-logo img {
       height: 70px;
     }
-
-    /* ── Links de navegación ── */
     .nav-links {
       display: flex;
       align-items: center;
@@ -307,8 +298,6 @@
       color: var(--rust);
       background: rgba(212, 162, 69, 0.06);
     }
-
-    /* Indicador activo — línea inferior animada */
     .nav-links a::after {
       content: '';
       position: absolute;
@@ -326,8 +315,6 @@
       left: 1.1rem;
       right: 1.1rem;
     }
-
-    /* ── Botón CTA en el nav ── */
     .nav-cta {
       display: inline-flex;
       align-items: center;
@@ -348,11 +335,9 @@
       background: var(--rust-dark) !important;
       transform: translateY(-1px);
     }
-    .nav-cta::after { display: none !important; } /* Sin indicador activo */
-
-    /* ── Hamburguesa (solo visible en móvil) ── */
+    .nav-cta::after { display: none !important; }
     .hamburger {
-      display: none; /* Oculto en desktop */
+      display: none;
       flex-direction: column;
       justify-content: center;
       gap: 5px;
@@ -370,7 +355,6 @@
       transition: transform 0.3s ease, opacity 0.3s ease;
       transform-origin: center;
     }
-    /* Animación de la X al abrir */
     .hamburger.open span:nth-child(1) {
       transform: translateY(7px) rotate(45deg);
     }
@@ -380,8 +364,6 @@
     .hamburger.open span:nth-child(3) {
       transform: translateY(-7px) rotate(-45deg);
     }
-
-    /* ── Overlay para cerrar menú móvil ── */
     .nav-overlay {
       display: none;
       position: fixed;
@@ -450,14 +432,11 @@
       align-self: flex-start;
     }
     .btn-primary:hover { background: var(--rust-dark); transform: translateY(-2px); }
-
     .hero-visual {
       position: relative;
       overflow: hidden;
       animation: fadeIn 1.2s ease both 0.3s;
     }
-
-    /* ── SLIDESHOW ── */
     .slideshow { position: absolute; inset: 0; }
     .slide {
       position: absolute; inset: 0;
@@ -620,8 +599,6 @@
        GALERÍA POR CATEGORÍAS
        ══════════════════════════════════════════ */
     #galeria { background: var(--warm); }
-
-    /* Tabs de categoría */
     .gallery-tabs {
       display: flex;
       gap: 0.5rem;
@@ -651,12 +628,10 @@
       border-color: var(--rust);
       color: #fff;
     }
-
-    /* Grids de cada categoría */
     .gallery-category {
       display: none;
       grid-template-columns: repeat(3, 1fr);
-      grid-template-rows: 260px 260px;
+      grid-auto-rows: 260px;
       gap: 1rem;
       margin-top: 1.5rem;
       animation: fadeUp 0.4s ease both;
@@ -667,7 +642,6 @@
     .gallery-category .gallery-item:first-child {
       grid-row: 1 / 3;
     }
-
     .gallery-item {
       border-radius: 4px;
       overflow: hidden;
@@ -706,7 +680,6 @@
     #aperturas { background: var(--dark); color: var(--cream); }
     #aperturas .section-title { color: var(--cream); }
     #aperturas .section-desc { color: var(--sand); }
-
     .aperturas-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -724,8 +697,6 @@
       border-color: rgba(212, 162, 69, 0.3);
       transform: translateY(-3px);
     }
-
-    /* Video container */
     .apertura-video {
       position: relative;
       width: 100%;
@@ -737,9 +708,6 @@
       height: auto;
       display: block;
     }
-
-    /* Play hint overlay */
-    /* Info section */
     .apertura-info {
       padding: 1.5rem;
     }
@@ -769,7 +737,6 @@
     .apertura-cta:hover {
       color: var(--cream);
     }
-
     @media (max-width: 900px) {
       .aperturas-grid {
         grid-template-columns: 1fr 1fr;
@@ -787,7 +754,6 @@
     #catalogo { background: var(--dark); color: var(--cream); }
     #catalogo .section-title { color: var(--cream); }
     #catalogo .section-desc { color: var(--sand); }
-
     .catalog-single {
       display: flex;
       justify-content: center;
@@ -887,7 +853,6 @@
       margin-left: auto;
       margin-right: auto;
     }
-
     .suppliers-row {
       display: flex;
       justify-content: center;
@@ -967,7 +932,6 @@
     .contact-item-text span { font-size: 1rem; color: var(--dark); font-weight: 400; }
     .contact-item-text a { color: var(--rust); text-decoration: none; }
     .contact-item-text a:hover { text-decoration: underline; }
-
     .contact-form { background: var(--warm); padding: 2.5rem; border-radius: 4px; }
     .contact-form h3 {
       font-family: 'Playfair Display', serif;
@@ -1002,8 +966,6 @@
     .form-group textarea:focus,
     .form-group select:focus { border-color: var(--rust); }
     .form-group textarea { resize: vertical; min-height: 110px; }
-
-    /* Selector de país + teléfono */
     .phone-input-group {
       display: flex;
       gap: 0;
@@ -1080,7 +1042,7 @@
     footer strong { color: var(--sand); }
 
     /* ══════════════════════════════════════════
-       LIGHTBOX — Galería fullscreen
+       LIGHTBOX
        ══════════════════════════════════════════ */
     .lightbox {
       position: fixed;
@@ -1100,8 +1062,6 @@
       opacity: 1;
       visibility: visible;
     }
-
-    /* Imagen principal */
     .lightbox-img-wrapper {
       position: relative;
       max-width: 85vw;
@@ -1125,8 +1085,6 @@
       opacity: 1;
       transform: scale(1);
     }
-
-    /* Caption */
     .lightbox-caption {
       position: absolute;
       bottom: 2rem;
@@ -1142,8 +1100,6 @@
       border-radius: 4px;
       white-space: nowrap;
     }
-
-    /* Contador (1/5) */
     .lightbox-counter {
       position: absolute;
       top: 1.5rem;
@@ -1154,8 +1110,6 @@
       letter-spacing: 0.12em;
       font-weight: 300;
     }
-
-    /* Botón cerrar */
     .lightbox-close {
       position: absolute;
       top: 1.2rem; right: 1.5rem;
@@ -1175,8 +1129,6 @@
       background: rgba(253, 246, 236, 0.2);
       transform: scale(1.08);
     }
-
-    /* Flechas de navegación */
     .lightbox-prev,
     .lightbox-next {
       position: absolute;
@@ -1202,8 +1154,6 @@
       background: rgba(212, 162, 69, 0.25);
       transform: translateY(-50%) scale(1.08);
     }
-
-    /* Botón CTA dentro del lightbox */
     .lightbox-cta {
       position: absolute;
       bottom: 3.5rem;
@@ -1228,8 +1178,6 @@
       background: var(--rust-dark);
       transform: translateY(-2px);
     }
-
-    /* Responsive lightbox */
     @media (max-width: 900px) {
       .lightbox-img-wrapper img {
         max-width: 85vw;
@@ -1255,12 +1203,41 @@
         padding: 0.55rem 1rem;
       }
     }
-
-    /* Cursor pointer en items de galería */
     .gallery-item { cursor: pointer; }
 
+    /* Items ocultos y botón Ver más */
+    .gallery-hidden {
+      display: none;
+    }
+    .gallery-category.show-all .gallery-hidden {
+      display: block;
+    }
+    .gallery-show-more {
+      display: none;
+      margin: 1rem auto 0;
+      background: transparent;
+      border: 1px solid rgba(26, 26, 46, 0.15);
+      border-radius: 20px;
+      padding: 0.35rem 1.5rem;
+      color: var(--rust);
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.78rem;
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      cursor: pointer;
+      transition: all 0.25s ease;
+    }
+    .gallery-show-more.visible {
+      display: block;
+    }
+    .gallery-show-more:hover {
+      background: var(--rust);
+      color: #fff;
+      border-color: var(--rust);
+    }
+
     /* ══════════════════════════════════════════
-       FLOATER — Solicitar Cotización
+       FLOATER
        ══════════════════════════════════════════ */
     .float-cta {
       position: fixed;
@@ -1303,8 +1280,6 @@
       stroke-linecap: round;
       stroke-linejoin: round;
     }
-
-    /* En móvil: ocultar texto, solo ícono */
     @media (max-width: 900px) {
       .float-cta {
         bottom: 4rem;
@@ -1317,9 +1292,6 @@
 
     /* ══════════════════════════════════════════
        BARRA SOCIAL FLOTANTE
-       - Vertical, fija en el borde izquierdo
-       - Visible pero no invasiva
-       - Aparece tras hacer scroll
        ══════════════════════════════════════════ */
     .social-bar {
       position: fixed;
@@ -1333,7 +1305,6 @@
       transition: opacity 0.4s ease;
     }
     .social-bar.visible { opacity: 1; }
-
     .social-bar a {
       display: flex;
       align-items: center;
@@ -1353,8 +1324,6 @@
     .social-bar a:hover {
       width: 160px;
     }
-
-    /* Íconos SVG inline para no depender de librerías externas */
     .social-bar a svg {
       width: 18px; height: 18px;
       flex-shrink: 0;
@@ -1365,21 +1334,15 @@
       transition: opacity 0.2s ease 0.1s;
     }
     .social-bar a:hover span { opacity: 1; }
-
-    /* Colores por red social — paleta Ocre & Índigo */
     .social-whatsapp  { background: #25d366; }
     .social-facebook  { background: #2d2d5e; }
     .social-tiktok    { background: #1a1a2e; }
-
-    /* Bordes redondeados solo en las esquinas externas */
     .social-bar a:first-child {
       border-radius: 0 8px 0 0;
     }
     .social-bar a:last-child {
       border-radius: 0 0 8px 0;
     }
-
-    /* ── Responsive: en móvil → barra horizontal abajo ── */
     @media (max-width: 900px) {
       .social-bar {
         left: 0; right: 0; top: auto; bottom: 0;
@@ -1407,7 +1370,6 @@
         opacity: 1;
         font-size: 0.65rem;
       }
-      /* En móvil separar del footer */
       footer { padding-bottom: 4.5rem; }
     }
 
@@ -1424,10 +1386,9 @@
     }
 
     /* ══════════════════════════════════════════
-       RESPONSIVE — TABLET & MÓVIL
+       RESPONSIVE
        ══════════════════════════════════════════ */
     @media (max-width: 900px) {
-      /* ── Nav móvil ── */
       nav {
         padding: 0.6rem 1.5rem;
       }
@@ -1436,11 +1397,7 @@
       }
       .nav-logo img { height: 65px; }
       nav.scrolled .nav-logo img { height: 50px; }
-
-      /* Mostrar hamburguesa */
       .hamburger { display: flex; }
-
-      /* Menú lateral deslizante */
       .nav-links {
         position: fixed;
         top: 0; right: 0;
@@ -1474,8 +1431,6 @@
         border-left: 3px solid var(--rust);
         padding-left: calc(0.8rem - 3px);
       }
-
-      /* CTA en menú móvil */
       .nav-cta {
         margin-left: 0;
         margin-top: 1rem;
@@ -1483,8 +1438,6 @@
         justify-content: center;
         padding: 0.9rem 1.3rem;
       }
-
-      /* ── Hero ── */
       #hero {
         grid-template-columns: 1fr;
         grid-template-rows: auto 280px;
@@ -1496,8 +1449,6 @@
       .stat { padding: 0.5rem 0.7rem; }
       .stat-num { font-size: 1.1rem; }
       .stat-label { font-size: 0.55rem; }
-
-      /* ── Secciones ── */
       section { padding: 4rem 2rem; }
       #servicios { padding: 4rem 2rem; }
       .services-grid { grid-template-columns: 1fr; }
@@ -1509,7 +1460,6 @@
       #contacto { grid-template-columns: 1fr; gap: 2rem; }
       .form-buttons { flex-direction: column; }
     }
-
     @media (max-width: 480px) {
       .hero-stat-group { flex-direction: column; gap: 0.5rem; }
       .stat { padding: 0.4rem 0.6rem; }
@@ -1533,15 +1483,11 @@
   <div class="nav-logo">
     <img src="https://lh3.googleusercontent.com/d/1Qyr-A4GFK58HiX5yFdhuHFHFB2GsPdqy" alt="Ventanas Europeas SMA" />
   </div>
-
-  <!-- Botón hamburguesa (solo móvil) -->
   <button class="hamburger" id="hamburger" aria-label="Abrir menú" aria-expanded="false">
     <span></span>
     <span></span>
     <span></span>
   </button>
-
-  <!-- Links de navegación -->
   <div class="nav-links" id="navLinks">
     <a href="#hero" data-section="hero" data-es="Inicio" data-en="Home">Inicio</a>
     <a href="#servicios" data-section="servicios" data-es="Servicios" data-en="Services">Servicios</a>
@@ -1549,7 +1495,7 @@
     <a href="#aperturas" data-section="aperturas" data-es="Aperturas" data-en="Opening Types">Aperturas</a>
     <a href="#catalogo" data-section="catalogo" data-es="Colores" data-en="Colors">Colores</a>
     <a href="#contacto" data-section="contacto" data-es="Contacto" data-en="Contact">Contacto</a>
-    <a href="https://wa.me/525523395018" class="nav-cta" target="_blank">
+    <a href="https://wa.me/524151182417" class="nav-cta" target="_blank">
       💬 WhatsApp
     </a>
     <div class="lang-toggle" id="langToggle">
@@ -1559,7 +1505,6 @@
   </div>
 </nav>
 
-<!-- Overlay para cerrar menú móvil -->
 <div class="nav-overlay" id="navOverlay"></div>
 
 <!-- ══════════════════════════════════════════
@@ -1569,7 +1514,7 @@
   <div class="hero-text">
     <p class="hero-eyebrow" data-es="Contratistas · San Miguel de Allende" data-en="Contractors · San Miguel de Allende">Contratistas · San Miguel de Allende</p>
     <h1 class="hero-title" data-es-html="Construcción<br>con <span>calidad</span><br>y precisión" data-en-html="Construction<br>with <span>quality</span><br>and precision">Construcción<br>con <span>calidad</span><br>y precisión</h1>
-    <p class="hero-sub" data-es="Especialistas en cancelería de PVC: ventanas, puertas y canceles a medida. Instalación profesional con garantía en San Miguel de Allende." data-en="Specialists in PVC frames: custom windows, doors and partitions. Professional installation with warranty in San Miguel de Allende.">Especialistas en cancelería de PVC: ventanas, puertas y canceles a medida. Instalación profesional con garantía en San Miguel de Allende.</p>
+    <p class="hero-sub" data-es="Especialistas en cancelería de aluminio y PVC: ventanas, puertas y canceles a medida. Instalación profesional con garantía en San Miguel de Allende." data-en="Specialists in aluminum and PVC frames: custom windows, doors and partitions. Professional installation with warranty in San Miguel de Allende.">Especialistas en cancelería de aluminio y PVC: ventanas, puertas y canceles a medida. Instalación profesional con garantía en San Miguel de Allende.</p>
     <a href="#contacto" class="btn-primary" data-es="Solicitar Cotización" data-en="Request a Quote">Solicitar Cotización</a>
   </div>
   <div class="hero-visual">
@@ -1633,13 +1578,10 @@
   </div>
 </section>
 
-<!-- ══════════════════════════════════════════
-     ¿POR QUÉ ELEGIRNOS?
-     ══════════════════════════════════════════ -->
+<!-- ¿POR QUÉ ELEGIRNOS? -->
 <section id="porque">
   <p class="section-eyebrow" data-es="Lo que nos hace diferentes" data-en="What makes us different">Lo que nos hace diferentes</p>
   <h2 class="section-title" data-es="¿Por qué elegirnos?" data-en="Why choose us?">¿Por qué elegirnos?</h2>
-
   <div class="porque-grid">
     <div class="porque-item">
       <div class="porque-num">01</div>
@@ -1665,16 +1607,16 @@
 </section>
 
 <!-- ══════════════════════════════════════════
-     SERVICIOS
+     SERVICIOS — CAMBIO 1: "Ventanas" en vez de "Ventanas de PVC"
      ══════════════════════════════════════════ -->
 <section id="servicios">
   <p class="section-eyebrow" data-es="Lo que hacemos" data-en="What we do">Lo que hacemos</p>
   <h2 class="section-title" data-es="Nuestros Servicios" data-en="Our Services">Nuestros Servicios</h2>
-  <p class="section-desc" data-es="Somos especialistas en cancelería de alta calidad. Fabricamos e instalamos a medida para casas, oficinas y locales comerciales." data-en="We are specialists in high-quality PVC frames. We manufacture and install custom solutions for homes, offices and commercial spaces.">Somos especialistas en cancelería de alta calidad. Fabricamos e instalamos a medida para casas, oficinas y locales comerciales.</p>
+  <p class="section-desc" data-es="Somos especialistas en cancelería de aluminio y PVC de alta calidad. Fabricamos e instalamos a medida para casas, oficinas y locales comerciales." data-en="We are specialists in high-quality aluminum and PVC frames. We manufacture and install custom solutions for homes, offices and commercial spaces.">Somos especialistas en cancelería de aluminio y PVC de alta calidad. Fabricamos e instalamos a medida para casas, oficinas y locales comerciales.</p>
   <div class="services-grid">
-    <a href="#contacto" class="service-card" data-servicio="Ventanas de PVC">
+    <a href="#contacto" class="service-card" data-servicio="Ventanas">
       <div class="service-icon">🪟</div>
-      <h3 data-es="Ventanas de PVC" data-en="PVC Windows">Ventanas de PVC</h3>
+      <h3 data-es="Ventanas" data-en="Windows">Ventanas</h3>
       <p data-es="Ventanas corredizas, abatibles y proyectables. Perfiles de alta resistencia con cristal templado o laminado según tu necesidad." data-en="Sliding, casement and projecting windows. High-resistance profiles with tempered or laminated glass according to your needs.">Ventanas corredizas, abatibles y proyectables. Perfiles de alta resistencia con cristal templado o laminado según tu necesidad.</p>
     </a>
     <a href="#contacto" class="service-card" data-servicio="Puertas de PVC">
@@ -1690,14 +1632,11 @@
   </div>
 </section>
 
-<!-- ══════════════════════════════════════════
-     PROVEEDORES Y CERTIFICACIONES
-     ══════════════════════════════════════════ -->
+<!-- PROVEEDORES -->
 <section id="proveedores">
   <p class="section-eyebrow" data-es="Respaldo de calidad" data-en="Quality backed">Respaldo de calidad</p>
   <h2 class="section-title" data-es="Nuestros Proveedores" data-en="Our Suppliers">Nuestros Proveedores</h2>
   <p class="section-desc" data-es="Trabajamos con las marcas líderes en sistemas de ventanas y perfiles para garantizar la máxima calidad en cada proyecto." data-en="We work with leading brands in window systems and profiles to guarantee the highest quality in every project.">Trabajamos con las marcas líderes en sistemas de ventanas y perfiles para garantizar la máxima calidad en cada proyecto.</p>
-
   <div class="suppliers-row">
     <div class="supplier-card">
       <img src="https://lh3.googleusercontent.com/d/1cBLr7dmMZjPxysOKD82KDkDosVWqSxNf" alt="Salamander"/>
@@ -1711,106 +1650,87 @@
   </div>
 </section>
 
-<!-- ══════════════════════════════════════════
-     GALERÍA POR CATEGORÍAS
-     ══════════════════════════════════════════ -->
+<!-- GALERÍA -->
 <section id="galeria">
   <p class="section-eyebrow" data-es="Nuestro trabajo" data-en="Our work">Nuestro trabajo</p>
   <h2 class="section-title" data-es="Proyectos Realizados" data-en="Completed Projects">Proyectos Realizados</h2>
   <p class="section-desc" data-es="Cada obra es un reflejo de nuestro compromiso con la calidad. Explora nuestros trabajos por categoría." data-en="Every project reflects our commitment to quality. Browse our work by category.">Cada obra es un reflejo de nuestro compromiso con la calidad. Explora nuestros trabajos por categoría.</p>
-
-  <!-- Tabs de categoría -->
   <div class="gallery-tabs">
     <button class="gallery-tab active" data-category="ventanas" data-es="🪟 Ventanas" data-en="🪟 Windows">🪟 Ventanas</button>
     <button class="gallery-tab" data-category="puertas" data-es="🚪 Puertas" data-en="🚪 Doors">🚪 Puertas</button>
     <button class="gallery-tab" data-category="canceles" data-es="🏢 Canceles" data-en="🏢 Partitions">🏢 Canceles</button>
   </div>
 
-  <!-- ── Categoría: Ventanas ── -->
   <div class="gallery-category active" data-category="ventanas">
     <div class="gallery-item">
-      <img src="https://placehold.co/800x600/d4a245/ffffff?text=Ventana+Corrediza" alt="Ventana corrediza"/>
-      <div class="gallery-label"><span>Ventana Corrediza</span></div>
+      <img src="https://lh3.googleusercontent.com/d/1f-D5649K0UdQPmr_rLmbNzT01UeY2edU" alt="Ventana de PVC"/>
+      <div class="gallery-label"><span>Ventana de PVC</span></div>
     </div>
     <div class="gallery-item">
-      <img src="https://placehold.co/800x600/b8862e/ffffff?text=Ventana+Abatible" alt="Ventana abatible estilo europeo"/>
-      <div class="gallery-label"><span>Ventana Abatible Europea</span></div>
+      <img src="https://lh3.googleusercontent.com/d/1QE--Jp__yuGd2sB8gWRA0xKx2qm-gpOb" alt="Ventana estilo europeo"/>
+      <div class="gallery-label"><span>Ventana Estilo Europeo</span></div>
     </div>
     <div class="gallery-item">
-      <img src="https://placehold.co/800x600/1a1a2e/d4a245?text=Ventanal+Piso+a+Techo" alt="Ventanal de piso a techo"/>
-      <div class="gallery-label"><span>Ventanal Piso a Techo</span></div>
-    </div>
-    <div class="gallery-item">
-      <img src="https://placehold.co/800x600/2d2d5e/fdf6ec?text=Ventana+Proyectable" alt="Ventana proyectable"/>
-      <div class="gallery-label"><span>Ventana Proyectable</span></div>
-    </div>
-    <div class="gallery-item">
-      <img src="https://placehold.co/800x600/e8dcc8/1a1a2e?text=Ventana+Fija" alt="Ventana fija panorámica"/>
-      <div class="gallery-label"><span>Ventana Fija Panorámica</span></div>
+      <img src="https://lh3.googleusercontent.com/d/1BRcEgbXgiUfip9IXNaej1AfgvzUfOgeg" alt="Ventanal de PVC"/>
+      <div class="gallery-label"><span>Ventanal de PVC</span></div>
     </div>
   </div>
 
-  <!-- ── Categoría: Puertas ── -->
   <div class="gallery-category" data-category="puertas">
     <div class="gallery-item">
-      <img src="https://placehold.co/800x600/d4a245/ffffff?text=Puerta+Principal" alt="Puerta principal"/>
-      <div class="gallery-label"><span>Puerta Principal</span></div>
+      <img src="https://lh3.googleusercontent.com/d/1W7opQ_81SqZ5g5xBbO3VBve5n5Y52C_o" alt="Puerta de PVC"/>
+      <div class="gallery-label"><span>Puerta de PVC</span></div>
     </div>
     <div class="gallery-item">
-      <img src="https://placehold.co/800x600/b8862e/ffffff?text=Puerta+Corrediza" alt="Puerta corrediza de cristal"/>
-      <div class="gallery-label"><span>Puerta Corrediza de Cristal</span></div>
+      <img src="https://lh3.googleusercontent.com/d/14ArGSBILfEB4fVhTv15Jbqjw5yEIJHKx" alt="Puerta corrediza"/>
+      <div class="gallery-label"><span>Puerta Corrediza</span></div>
     </div>
     <div class="gallery-item">
-      <img src="https://placehold.co/800x600/1a1a2e/d4a245?text=Puerta+Abatible" alt="Puerta abatible doble"/>
-      <div class="gallery-label"><span>Puerta Abatible Doble</span></div>
-    </div>
-    <div class="gallery-item">
-      <img src="https://placehold.co/800x600/2d2d5e/fdf6ec?text=Puerta+Plegable" alt="Puerta plegable tipo acordeón"/>
-      <div class="gallery-label"><span>Puerta Plegable Acordeón</span></div>
-    </div>
-    <div class="gallery-item">
-      <img src="https://placehold.co/800x600/e8dcc8/1a1a2e?text=Puerta+de+Servicio" alt="Puerta de servicio"/>
-      <div class="gallery-label"><span>Puerta de Servicio</span></div>
+      <img src="https://lh3.googleusercontent.com/d/1naG_6JmlTv2Te2jQQ-6qFUv_NswyVj_w" alt="Puerta de entrada"/>
+      <div class="gallery-label"><span>Puerta de Entrada</span></div>
     </div>
   </div>
 
-  <!-- ── Categoría: Canceles ── -->
-  <div class="gallery-category" data-category="canceles">
+  <div class="gallery-category" data-category="canceles" id="canceles-grid">
     <div class="gallery-item">
-      <img src="https://placehold.co/800x600/d4a245/ffffff?text=Cancel+de+Baño" alt="Cancel de baño cristal templado"/>
-      <div class="gallery-label"><span>Cancel de Baño Templado</span></div>
+      <img src="https://lh3.googleusercontent.com/d/13g7EhKPyx_hrQiLWqTqArwNM2HSppViL" alt="Cancel de baño"/>
+      <div class="gallery-label"><span>Cancel de Baño</span></div>
     </div>
     <div class="gallery-item">
-      <img src="https://placehold.co/800x600/b8862e/ffffff?text=Cancel+Esmerilado" alt="Cancel de baño esmerilado"/>
+      <img src="https://lh3.googleusercontent.com/d/1HTWH5XCjd0GifG4KloxBMimMpQ0p995E" alt="Cancel de cristal"/>
+      <div class="gallery-label"><span>Cancel de Cristal</span></div>
+    </div>
+    <div class="gallery-item">
+      <img src="https://lh3.googleusercontent.com/d/1VzMDwJBVQMhJFIagWV_ko-1Jpx1FSF3K" alt="Cancel corredizo"/>
+      <div class="gallery-label"><span>Cancel Corredizo</span></div>
+    </div>
+    <div class="gallery-item">
+      <img src="https://lh3.googleusercontent.com/d/1F4axn4PYQxN8TajBFZRcbJ6L9erO05Gl" alt="Cancel esmerilado"/>
       <div class="gallery-label"><span>Cancel Esmerilado</span></div>
     </div>
     <div class="gallery-item">
-      <img src="https://placehold.co/800x600/1a1a2e/d4a245?text=Division+Oficina" alt="División de oficina en cristal"/>
-      <div class="gallery-label"><span>División de Oficina</span></div>
+      <img src="https://lh3.googleusercontent.com/d/1e-ZNSe_Abp-TCLOp7mrszYLsyhKVB1vv" alt="División de cristal"/>
+      <div class="gallery-label"><span>División de Cristal</span></div>
     </div>
-    <div class="gallery-item">
-      <img src="https://placehold.co/800x600/2d2d5e/fdf6ec?text=Cancel+Corredizo" alt="Cancel corredizo para regadera"/>
-      <div class="gallery-label"><span>Cancel Corredizo Regadera</span></div>
+    <div class="gallery-item gallery-hidden">
+      <img src="https://lh3.googleusercontent.com/d/12_sK-AN_-kTSLrFooI71bpdxAYYvR3v6" alt="Cancel templado"/>
+      <div class="gallery-label"><span>Cancel Templado</span></div>
     </div>
-    <div class="gallery-item">
-      <img src="https://placehold.co/800x600/e8dcc8/1a1a2e?text=Divisorio+Cristal" alt="Divisorio de cristal templado"/>
-      <div class="gallery-label"><span>Divisorio Cristal Templado</span></div>
+    <div class="gallery-item gallery-hidden">
+      <img src="https://lh3.googleusercontent.com/d/1dvjsyrJH9cWpxNb_rNC78gJRWq2fTcTS" alt="Cancel de baño moderno"/>
+      <div class="gallery-label"><span>Cancel de Baño Moderno</span></div>
     </div>
   </div>
+  <button class="gallery-show-more" id="btnShowMore" data-es="Ver más ↓" data-en="Show more ↓">Ver más ↓</button>
 
-  </div>
 </section>
 
-<!-- ══════════════════════════════════════════
-     TIPOS DE APERTURA
-     ══════════════════════════════════════════ -->
+<!-- TIPOS DE APERTURA -->
 <section id="aperturas">
   <p class="section-eyebrow" data-es="Conoce las opciones" data-en="Explore the options">Conoce las opciones</p>
   <h2 class="section-title" data-es="Tipos de Apertura" data-en="Opening Types">Tipos de Apertura</h2>
   <p class="section-desc" data-es="Cada espacio necesita un tipo de apertura diferente. Conoce cómo funciona cada sistema y elige el ideal para tu proyecto." data-en="Every space needs a different opening type. Learn how each system works and choose the ideal one for your project.">Cada espacio necesita un tipo de apertura diferente. Conoce cómo funciona cada sistema y elige el ideal para tu proyecto.</p>
-
   <div class="aperturas-grid">
-
     <div class="apertura-card">
       <div class="apertura-video">
         <img src="https://lh3.googleusercontent.com/d/1PKw98oXWIaH8fxAxzxtPIyZ-nDFS47rM" alt="Proyectante" loading="lazy"/>
@@ -1821,7 +1741,6 @@
         <a href="#contacto" class="apertura-cta" data-es="Cotizar →" data-en="Quote →">Cotizar →</a>
       </div>
     </div>
-
     <div class="apertura-card">
       <div class="apertura-video">
         <img src="https://lh3.googleusercontent.com/d/1X8ObYgq246BF3jHVruk9Joxyyo6x4y3w" alt="Oscilobatiente" loading="lazy"/>
@@ -1832,7 +1751,6 @@
         <a href="#contacto" class="apertura-cta" data-es="Cotizar →" data-en="Quote →">Cotizar →</a>
       </div>
     </div>
-
     <div class="apertura-card">
       <div class="apertura-video">
         <img src="https://lh3.googleusercontent.com/d/100py_g9s2o1GlAZbRVuNR5PiVKyh0YCK" alt="Corrediza" loading="lazy"/>
@@ -1843,7 +1761,6 @@
         <a href="#contacto" class="apertura-cta" data-es="Cotizar →" data-en="Quote →">Cotizar →</a>
       </div>
     </div>
-
     <div class="apertura-card">
       <div class="apertura-video">
         <img src="https://lh3.googleusercontent.com/d/1creuoHJEMHE9ZT94wKgmBmC8OexzziEw" alt="Corredera Elevable" loading="lazy"/>
@@ -1854,7 +1771,6 @@
         <a href="#contacto" class="apertura-cta" data-es="Cotizar →" data-en="Quote →">Cotizar →</a>
       </div>
     </div>
-
     <div class="apertura-card">
       <div class="apertura-video">
         <img src="https://lh3.googleusercontent.com/d/1fvH2dmpxhJIvww2lPj2SjoT3jvcE4jjl" alt="Practicable Interior" loading="lazy"/>
@@ -1865,7 +1781,6 @@
         <a href="#contacto" class="apertura-cta" data-es="Cotizar →" data-en="Quote →">Cotizar →</a>
       </div>
     </div>
-
     <div class="apertura-card">
       <div class="apertura-video">
         <img src="https://lh3.googleusercontent.com/d/1DxoKHJjTwbr4jKRjnArwXCIHZlg_ub3H" alt="Practicable Exterior" loading="lazy"/>
@@ -1876,18 +1791,14 @@
         <a href="#contacto" class="apertura-cta" data-es="Cotizar →" data-en="Quote →">Cotizar →</a>
       </div>
     </div>
-
   </div>
 </section>
 
-<!-- ══════════════════════════════════════════
-     CATÁLOGO DE COLORES
-     ══════════════════════════════════════════ -->
+<!-- CATÁLOGO DE COLORES -->
 <section id="catalogo">
   <p class="section-eyebrow" data-es="Materiales" data-en="Materials">Materiales</p>
   <h2 class="section-title" data-es="Catálogo de Colores" data-en="Color Catalog">Catálogo de Colores</h2>
   <p class="section-desc" data-es="Personaliza tus ventanas y puertas con nuestra variedad de acabados REHAU: tonos clásicos, estilo madera y lisos modernos, todos resistentes a la intemperie." data-en="Customize your windows and doors with our variety of REHAU finishes: classic tones, wood style and modern smooth, all weather-resistant.">Personaliza tus ventanas y puertas con nuestra variedad de acabados REHAU: tonos clásicos, estilo madera y lisos modernos, todos resistentes a la intemperie.</p>
-
   <div class="catalog-single">
     <div class="catalog-card">
       <div class="catalog-icon">
@@ -1909,19 +1820,23 @@
   </div>
 </section>
 
-<!-- ══════════════════════════════════════════
-     CONTACTO
-     ══════════════════════════════════════════ -->
+<!-- CONTACTO -->
 <section id="contacto">
   <div class="contact-info">
     <p class="section-eyebrow" data-es="Hablemos" data-en="Let's talk">Hablemos</p>
     <h2 class="section-title" data-es="¿Tienes un proyecto en mente?" data-en="Have a project in mind?">¿Tienes un proyecto en mente?</h2>
     <p class="section-desc" data-es="Contáctanos para recibir una cotización sin compromiso. Estamos listos para ayudarte en San Miguel de Allende y alrededores." data-en="Contact us for a free quote. We are ready to help you in San Miguel de Allende and surrounding areas.">Contáctanos para recibir una cotización sin compromiso. Estamos listos para ayudarte en San Miguel de Allende y alrededores.</p>
-
     <div class="contact-item">
       <div class="contact-icon">📞</div>
       <div class="contact-item-text">
         <strong data-es="Teléfono / WhatsApp" data-en="Phone / WhatsApp">Teléfono / WhatsApp</strong>
+        <span><a href="https://wa.me/524151182417" target="_blank">415 118 2417</a></span>
+      </div>
+    </div>
+    <div class="contact-item">
+      <div class="contact-icon">📱</div>
+      <div class="contact-item-text">
+        <strong data-es="Segundo contacto" data-en="Second contact">Segundo contacto</strong>
         <span><a href="https://wa.me/525523395018" target="_blank">55 2339 5018</a></span>
       </div>
     </div>
@@ -1940,7 +1855,6 @@
       </div>
     </div>
   </div>
-
   <div class="contact-form">
     <h3 data-es="Solicita tu Cotización" data-en="Request a Quote">Solicita tu Cotización</h3>
     <form id="contactForm" action="https://formspree.io/f/REEMPLAZA_ESTE_CODIGO" method="POST">
@@ -1977,7 +1891,7 @@
         <label data-es="Servicio que necesitas *" data-en="Service you need *">Servicio que necesitas *</label>
         <select name="servicio" required>
           <option value="">Selecciona un servicio…</option>
-          <option>Ventanas de PVC</option>
+          <option>Ventanas</option>
           <option>Puertas de PVC</option>
           <option>Canceles de Baño</option>
           <option>Divisiones de Oficina</option>
@@ -2033,13 +1947,13 @@
   <svg viewBox="0 0 24 24"><polyline points="18 15 12 9 6 15"/></svg>
 </button>
 
-<!-- Floater Solicitar Cotización -->
+<!-- Floater -->
 <a href="#contacto" class="float-cta" id="floatCta">
   <svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
   <span data-es="Solicitar Cotización" data-en="Request Quote">Solicitar Cotización</span>
 </a>
 
-<!-- Lightbox Galería Fullscreen -->
+<!-- Lightbox -->
 <div class="lightbox" id="lightbox">
   <button class="lightbox-close" id="lbClose" aria-label="Cerrar">✕</button>
   <div class="lightbox-counter" id="lbCounter"></div>
@@ -2052,9 +1966,9 @@
   <a href="#contacto" class="lightbox-cta" id="lbCta">Solicitar Cotización</a>
 </div>
 
-<!-- Barra Social Flotante -->
+<!-- Barra Social -->
 <div class="social-bar" id="socialBar">
-  <a href="https://wa.me/525523395018" target="_blank" rel="noopener" class="social-whatsapp" title="WhatsApp">
+  <a href="https://wa.me/524151182417" target="_blank" rel="noopener" class="social-whatsapp" title="WhatsApp">
     <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
     <span>WhatsApp</span>
   </a>
@@ -2072,20 +1986,11 @@
      JAVASCRIPT
      ══════════════════════════════════════════ -->
 <script>
-  // ─── 0. PRELOADER ───
-  // Se oculta cuando la página termina de cargar (o máximo 3s)
   const preloader = document.getElementById('preloader');
   const dismissPreloader = () => preloader.classList.add('done');
-
-  window.addEventListener('load', () => {
-    // Mínimo 800ms para que se vea el branding
-    setTimeout(dismissPreloader, 800);
-  });
-  // Fallback: si algo tarda demasiado, forzar cierre a los 3s
+  window.addEventListener('load', () => { setTimeout(dismissPreloader, 800); });
   setTimeout(dismissPreloader, 3000);
 
-  // ─── 1. MENÚ HAMBURGUESA ───
-  // Controla abrir/cerrar el menú lateral en móvil
   const hamburger = document.getElementById('hamburger');
   const navLinks  = document.getElementById('navLinks');
   const navOverlay = document.getElementById('navOverlay');
@@ -2094,17 +1999,14 @@
     const isOpen = navLinks.classList.toggle('open');
     hamburger.classList.toggle('open');
     hamburger.setAttribute('aria-expanded', isOpen);
-
-    // Mostrar/ocultar overlay
     if (isOpen) {
       navOverlay.classList.add('visible');
-      document.body.style.overflow = 'hidden'; // Prevenir scroll de fondo
+      document.body.style.overflow = 'hidden';
     } else {
       navOverlay.classList.remove('visible');
       document.body.style.overflow = '';
     }
   }
-
   function closeMenu() {
     navLinks.classList.remove('open');
     hamburger.classList.remove('open');
@@ -2112,104 +2014,65 @@
     navOverlay.classList.remove('visible');
     document.body.style.overflow = '';
   }
-
   hamburger.addEventListener('click', toggleMenu);
   navOverlay.addEventListener('click', closeMenu);
-
-  // Cerrar menú al hacer click en un link
   navLinks.querySelectorAll('a').forEach(link => {
     link.addEventListener('click', () => {
-      // Solo cierra si estamos en móvil (menú abierto)
-      if (navLinks.classList.contains('open')) {
-        closeMenu();
-      }
+      if (navLinks.classList.contains('open')) closeMenu();
     });
   });
 
-  // ─── 2. NAV SCROLL EFFECT + SOCIAL BAR ───
-  // Añade clase "scrolled" al nav y muestra la barra social al bajar
   const mainNav = document.getElementById('mainNav');
   const socialBar = document.getElementById('socialBar');
   const floatCta = document.getElementById('floatCta');
   const backToTop = document.getElementById('backToTop');
-  let lastScroll = 0;
 
   window.addEventListener('scroll', () => {
     const scrollY = window.scrollY;
-    if (scrollY > 60) {
-      mainNav.classList.add('scrolled');
-    } else {
-      mainNav.classList.remove('scrolled');
-    }
-    // Mostrar barra social y floater después de pasar el hero (~300px)
-    // Ocultar floater si ya está en la sección de contacto
+    if (scrollY > 60) { mainNav.classList.add('scrolled'); } else { mainNav.classList.remove('scrolled'); }
     const contactSection = document.getElementById('contacto');
     const contactTop = contactSection.getBoundingClientRect().top + scrollY - window.innerHeight;
-
     if (scrollY > 300) {
       socialBar.classList.add('visible');
       backToTop.classList.add('visible');
-      if (scrollY < contactTop) {
-        floatCta.classList.add('visible');
-      } else {
-        floatCta.classList.remove('visible');
-      }
+      if (scrollY < contactTop) { floatCta.classList.add('visible'); } else { floatCta.classList.remove('visible'); }
     } else {
       socialBar.classList.remove('visible');
       floatCta.classList.remove('visible');
       backToTop.classList.remove('visible');
     }
-    lastScroll = scrollY;
   }, { passive: true });
 
-  // Botón volver arriba
-  backToTop.addEventListener('click', () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  });
+  backToTop.addEventListener('click', () => { window.scrollTo({ top: 0, behavior: 'smooth' }); });
 
-  // ─── 3. ACTIVE LINK POR SECCIÓN ───
-  // Usa IntersectionObserver para detectar qué sección es visible
-  // y marca el link correspondiente como "active"
   const sections = document.querySelectorAll('section[id]');
   const navLinksArr = document.querySelectorAll('.nav-links a[data-section]');
-
   const sectionObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         const sectionId = entry.target.id;
-        navLinksArr.forEach(link => {
-          link.classList.toggle('active', link.dataset.section === sectionId);
-        });
+        navLinksArr.forEach(link => { link.classList.toggle('active', link.dataset.section === sectionId); });
       }
     });
-  }, {
-    // rootMargin: el 40% superior de la pantalla activa la detección
-    rootMargin: '-20% 0px -60% 0px',
-    threshold: 0
-  });
-
+  }, { rootMargin: '-20% 0px -60% 0px', threshold: 0 });
   sections.forEach(section => sectionObserver.observe(section));
 
-  // ─── 4. GALERÍA POR CATEGORÍAS + LIGHTBOX ───
-
-  // -- Tabs: cambiar categoría activa --
   const galleryTabs = document.querySelectorAll('.gallery-tab');
   const galleryCategories = document.querySelectorAll('.gallery-category');
-
   galleryTabs.forEach(tab => {
     tab.addEventListener('click', () => {
       const cat = tab.dataset.category;
-
-      // Activar tab
       galleryTabs.forEach(t => t.classList.remove('active'));
       tab.classList.add('active');
-
-      // Mostrar grid correspondiente
-      galleryCategories.forEach(g => {
-        g.classList.toggle('active', g.dataset.category === cat);
-      });
-
-      // Re-observar los nuevos items para scroll reveal
+      galleryCategories.forEach(g => { g.classList.toggle('active', g.dataset.category === cat); });
+      // Mostrar/ocultar botón "Ver más" solo para canceles
+      const btnMore = document.getElementById('btnShowMore');
+      const cancelesGrid = document.getElementById('canceles-grid');
+      if (cat === 'canceles' && !cancelesGrid.classList.contains('show-all')) {
+        btnMore.classList.add('visible');
+      } else {
+        btnMore.classList.remove('visible');
+      }
       const newItems = document.querySelectorAll('.gallery-category.active .gallery-item');
       newItems.forEach(el => {
         el.style.opacity = '0';
@@ -2220,19 +2083,31 @@
     });
   });
 
-  // -- Lightbox: solo imágenes de la categoría activa --
-  const lightbox   = document.getElementById('lightbox');
-  const lbImg      = document.getElementById('lbImg');
-  const lbCaption  = document.getElementById('lbCaption');
-  const lbCounter  = document.getElementById('lbCounter');
-  const lbClose    = document.getElementById('lbClose');
-  const lbPrev     = document.getElementById('lbPrev');
-  const lbNext     = document.getElementById('lbNext');
+  // Botón "Ver más" para canceles
+  document.getElementById('btnShowMore').addEventListener('click', function() {
+    const grid = document.getElementById('canceles-grid');
+    grid.classList.add('show-all');
+    this.classList.remove('visible');
+    // Animar los items recién visibles
+    grid.querySelectorAll('.gallery-hidden').forEach(el => {
+      el.style.opacity = '0';
+      el.style.transform = 'translateY(24px)';
+      el.style.transition = 'opacity .6s ease, transform .6s ease';
+      setTimeout(() => { el.style.opacity = '1'; el.style.transform = 'translateY(0)'; }, 50);
+      revealObserver.observe(el);
+    });
+  });
 
+  const lightbox = document.getElementById('lightbox');
+  const lbImg = document.getElementById('lbImg');
+  const lbCaption = document.getElementById('lbCaption');
+  const lbCounter = document.getElementById('lbCounter');
+  const lbClose = document.getElementById('lbClose');
+  const lbPrev = document.getElementById('lbPrev');
+  const lbNext = document.getElementById('lbNext');
   let lbCurrent = 0;
   let lbActiveData = [];
 
-  // Construir datos desde la categoría visible (solo fotos, no video)
   function getLbData() {
     const activeGrid = document.querySelector('.gallery-category.active');
     if (!activeGrid) return [];
@@ -2242,7 +2117,6 @@
       caption: item.querySelector('.gallery-label span')?.textContent || item.querySelector('img').alt
     }));
   }
-
   function openLightbox(index) {
     lbActiveData = getLbData();
     lbCurrent = index;
@@ -2250,12 +2124,10 @@
     lightbox.classList.add('open');
     document.body.style.overflow = 'hidden';
   }
-
   function closeLightbox() {
     lightbox.classList.remove('open');
     document.body.style.overflow = '';
   }
-
   function updateLightbox() {
     if (!lbActiveData.length) return;
     lbImg.style.opacity = '0';
@@ -2269,13 +2141,10 @@
       lbImg.style.transform = 'scale(1)';
     }, 150);
   }
-
   function lbGoTo(dir) {
     lbCurrent = (lbCurrent + dir + lbActiveData.length) % lbActiveData.length;
     updateLightbox();
   }
-
-  // Delegación de eventos: click en gallery-item dentro de cualquier categoría
   document.getElementById('galeria').addEventListener('click', (e) => {
     const item = e.target.closest('.gallery-item');
     if (!item) return;
@@ -2285,80 +2154,52 @@
     const index = items.indexOf(item);
     if (index !== -1) openLightbox(index);
   });
-
-  // Controles del lightbox
   lbClose.addEventListener('click', closeLightbox);
   lbPrev.addEventListener('click', () => lbGoTo(-1));
   lbNext.addEventListener('click', () => lbGoTo(1));
   document.getElementById('lbCta').addEventListener('click', closeLightbox);
-  lightbox.addEventListener('click', (e) => {
-    if (e.target === lightbox) closeLightbox();
-  });
+  lightbox.addEventListener('click', (e) => { if (e.target === lightbox) closeLightbox(); });
   document.addEventListener('keydown', (e) => {
     if (!lightbox.classList.contains('open')) return;
     if (e.key === 'Escape') closeLightbox();
     if (e.key === 'ArrowLeft') lbGoTo(-1);
     if (e.key === 'ArrowRight') lbGoTo(1);
   });
-
-  // Swipe táctil para navegar en móvil
   let touchStartX = 0;
   let touchEndX = 0;
-
-  lightbox.addEventListener('touchstart', (e) => {
-    touchStartX = e.changedTouches[0].screenX;
-  }, { passive: true });
-
+  lightbox.addEventListener('touchstart', (e) => { touchStartX = e.changedTouches[0].screenX; }, { passive: true });
   lightbox.addEventListener('touchend', (e) => {
     touchEndX = e.changedTouches[0].screenX;
     const diff = touchStartX - touchEndX;
-    if (Math.abs(diff) > 50) { // Mínimo 50px de swipe
-      if (diff > 0) {
-        lbGoTo(1);  // Swipe izquierda → siguiente
-      } else {
-        lbGoTo(-1); // Swipe derecha → anterior
-      }
-    }
+    if (Math.abs(diff) > 50) { if (diff > 0) { lbGoTo(1); } else { lbGoTo(-1); } }
   }, { passive: true });
 
-  // ─── 5. SERVICIOS → PRE-SELECCIÓN EN FORMULARIO ───
-  // Al hacer click en una card, pre-llena el select del formulario
   document.querySelectorAll('.service-card[data-servicio]').forEach(card => {
     card.addEventListener('click', () => {
       const servicio = card.dataset.servicio;
       const select = document.querySelector('select[name="servicio"]');
       if (select) {
         select.value = servicio;
-        // Pequeño flash visual para que el usuario note el cambio
         select.style.borderColor = 'var(--rust)';
         select.style.boxShadow = '0 0 0 3px rgba(212,162,69,0.2)';
-        setTimeout(() => {
-          select.style.borderColor = '';
-          select.style.boxShadow = '';
-        }, 2000);
+        setTimeout(() => { select.style.borderColor = ''; select.style.boxShadow = ''; }, 2000);
       }
     });
   });
 
-  // ─── 6. SLIDESHOW ───
-  const slides   = document.querySelectorAll('.slideshow .slide');
-  const dots     = document.querySelectorAll('.dot');
+  const slides = document.querySelectorAll('.slideshow .slide');
+  const dots = document.querySelectorAll('.dot');
   const captionEl = document.getElementById('activeCaption');
   const captions = Array.from(slides).map(s => {
     const c = s.querySelector('.slide-caption');
     return c ? c.textContent : '';
   });
   let current = 0;
-
   function updateCaption(idx) {
     if (!captionEl) return;
     captionEl.style.opacity = '0';
-    setTimeout(() => {
-      captionEl.textContent = captions[idx];
-      captionEl.style.opacity = '1';
-    }, 300);
+    setTimeout(() => { captionEl.textContent = captions[idx]; captionEl.style.opacity = '1'; }, 300);
   }
-
   function goTo(n) {
     slides[current].classList.remove('active');
     dots[current].classList.remove('active');
@@ -2367,91 +2208,58 @@
     dots[current].classList.add('active');
     updateCaption(current);
   }
-
   dots.forEach(dot => dot.addEventListener('click', () => goTo(+dot.dataset.i)));
   setInterval(() => goTo(current + 1), 5000);
   updateCaption(0);
 
-  // ─── 7. FORM — DOBLE ENVÍO (Correo + WhatsApp) ───
   const contactForm = document.getElementById('contactForm');
-
-  // Opción 1: Enviar por correo (Formspree) — submit normal del form
   contactForm.addEventListener('submit', function(e) {
     e.preventDefault();
-    // Aquí Formspree procesaría el envío si tienes el código configurado
     document.getElementById('formSuccess').style.display = 'block';
     this.reset();
-    setTimeout(() => {
-      document.getElementById('formSuccess').style.display = 'none';
-    }, 5000);
+    setTimeout(() => { document.getElementById('formSuccess').style.display = 'none'; }, 5000);
   });
-
-  // Opción 2: <span data-es="Enviar por WhatsApp" data-en="Send via WhatsApp">Enviar por WhatsApp</span> — construye mensaje con los datos del form
   document.getElementById('btnWhatsApp').addEventListener('click', function() {
     const form = contactForm;
-    const nombre    = form.querySelector('[name="nombre"]').value.trim();
-    const codigo    = form.querySelector('[name="codigo_pais"]').value;
-    const telefono  = form.querySelector('[name="telefono"]').value.trim();
-    const servicio  = form.querySelector('[name="servicio"]').value;
+    const nombre = form.querySelector('[name="nombre"]').value.trim();
+    const codigo = form.querySelector('[name="codigo_pais"]').value;
+    const telefono = form.querySelector('[name="telefono"]').value.trim();
+    const servicio = form.querySelector('[name="servicio"]').value;
     const ubicacion = form.querySelector('[name="ubicacion"]').value.trim();
-    const medidas   = form.querySelector('[name="medidas"]').value.trim();
+    const medidas = form.querySelector('[name="medidas"]').value.trim();
     const presupuesto = form.querySelector('[name="presupuesto"]').value;
-    const mensaje   = form.querySelector('[name="mensaje"]').value.trim();
-
-    // Validar campos obligatorios
-    if (!nombre || !telefono || !servicio || !ubicacion) {
-      // Activar validación nativa del navegador
-      form.reportValidity();
-      return;
-    }
-
-    // Construir mensaje de WhatsApp
+    const mensaje = form.querySelector('[name="mensaje"]').value.trim();
+    if (!nombre || !telefono || !servicio || !ubicacion) { form.reportValidity(); return; }
     let waMsg = `🪟 *Nueva Solicitud de Cotización*\n\n`;
     waMsg += `👤 *Nombre:* ${nombre}\n`;
     waMsg += `📞 *Teléfono:* ${codigo} ${telefono}\n`;
     waMsg += `🔧 *Servicio:* ${servicio}\n`;
     waMsg += `📍 *Ubicación:* ${ubicacion}\n`;
-    if (medidas)     waMsg += `📐 *Medidas:* ${medidas}\n`;
+    if (medidas) waMsg += `📐 *Medidas:* ${medidas}\n`;
     if (presupuesto) waMsg += `💰 *Presupuesto:* ${presupuesto}\n`;
-    if (mensaje)     waMsg += `💬 *Detalles:* ${mensaje}\n`;
+    if (mensaje) waMsg += `💬 *Detalles:* ${mensaje}\n`;
     waMsg += `\n_Enviado desde ventanaseuropeassma.com_`;
-
-    // Abrir WhatsApp con el mensaje
-    const waURL = `https://wa.me/525523395018?text=${encodeURIComponent(waMsg)}`;
+    const waURL = `https://wa.me/524151182417?text=${encodeURIComponent(waMsg)}`;
     window.open(waURL, '_blank');
-
-    // Mostrar confirmación y limpiar
     document.getElementById('formSuccess').style.display = 'block';
     form.reset();
-    setTimeout(() => {
-      document.getElementById('formSuccess').style.display = 'none';
-    }, 5000);
+    setTimeout(() => { document.getElementById('formSuccess').style.display = 'none'; }, 5000);
   });
 
-  // ─── 8. SCROLL REVEAL ───
   const revealObserver = new IntersectionObserver((entries) => {
     entries.forEach(e => {
-      if (e.isIntersecting) {
-        e.target.style.opacity = '1';
-        e.target.style.transform = 'translateY(0)';
-      }
+      if (e.isIntersecting) { e.target.style.opacity = '1'; e.target.style.transform = 'translateY(0)'; }
     });
   }, { threshold: 0.15 });
-
   document.querySelectorAll('.service-card, .gallery-item, .stat, .catalog-card, .supplier-card, .apertura-card, .porque-item').forEach(el => {
     el.style.opacity = '0';
     el.style.transform = 'translateY(24px)';
     el.style.transition = 'opacity .6s ease, transform .6s ease';
     revealObserver.observe(el);
   });
-  // ─── 9. GIFS DE APERTURA ───
-  // Los GIFs se reproducen automáticamente con <img>, no necesitan JS
 
-  // ─── 10. CONTADORES ANIMADOS ───
-  // Anima los números de 0 al valor final cuando entran en viewport
   const counters = document.querySelectorAll('.stat-num[data-count]');
   let countersAnimated = false;
-
   const counterObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting && !countersAnimated) {
@@ -2462,58 +2270,38 @@
           const suffix = counter.dataset.suffix || '';
           const duration = 2000;
           const startTime = performance.now();
-
-          function easeOutQuart(t) {
-            return 1 - Math.pow(1 - t, 4);
-          }
-
+          function easeOutQuart(t) { return 1 - Math.pow(1 - t, 4); }
           function updateCounter(currentTime) {
             const elapsed = currentTime - startTime;
             const progress = Math.min(elapsed / duration, 1);
             const easedProgress = easeOutQuart(progress);
             const currentVal = Math.round(easedProgress * target);
-
             counter.textContent = prefix + currentVal + suffix;
-
-            if (progress < 1) {
-              requestAnimationFrame(updateCounter);
-            }
+            if (progress < 1) requestAnimationFrame(updateCounter);
           }
-
           requestAnimationFrame(updateCounter);
         });
       }
     });
   }, { threshold: 0.5 });
-
   counters.forEach(c => counterObserver.observe(c));
 
-  // ─── 11. TRADUCCIÓN ES/EN ───
   let currentLang = 'es';
   const langBtns = document.querySelectorAll('.lang-btn');
-
   langBtns.forEach(btn => {
     btn.addEventListener('click', () => {
       const lang = btn.dataset.lang;
       if (lang === currentLang) return;
       currentLang = lang;
-
-      // Actualizar botones activos
       langBtns.forEach(b => b.classList.toggle('active', b.dataset.lang === lang));
-
-      // Traducir elementos con texto plano (data-es / data-en)
       document.querySelectorAll('[data-es][data-en]').forEach(el => {
         const text = el.getAttribute('data-' + lang);
         if (text) el.textContent = text;
       });
-
-      // Traducir elementos con HTML interno (data-es-html / data-en-html)
       document.querySelectorAll('[data-es-html][data-en-html]').forEach(el => {
         const html = el.getAttribute('data-' + lang + '-html');
         if (html) el.innerHTML = html;
       });
-
-      // Actualizar placeholders de inputs
       const placeholders = {
         es: { nombre: 'Tu nombre completo', telefono: '55 0000 0000', ubicacion: 'Colonia, calle o referencia en San Miguel de Allende', medidas: 'Ej: 4m x 3m, o 20 m² aprox.', mensaje: 'Cuéntanos más detalles de tu proyecto…' },
         en: { nombre: 'Your full name', telefono: '55 0000 0000', ubicacion: 'Neighborhood, street or reference in San Miguel de Allende', medidas: 'E.g.: 4m x 3m, or 20 m² approx.', mensaje: 'Tell us more about your project…' }
@@ -2527,53 +2315,33 @@
         f.querySelector('[name="medidas"]').placeholder = ph.medidas;
         f.querySelector('[name="mensaje"]').placeholder = ph.mensaje;
       }
-
-      // Traducir selects
       const servicioSelect = document.querySelector('select[name="servicio"]');
       if (servicioSelect) {
-        const servOpts = lang === 'en' 
-          ? ['Select a service…', 'PVC Windows', 'Aluminum Doors', 'Bathroom Partitions', 'Office Dividers', 'Full Frame Project', 'Complete Project']
-          : ['Selecciona un servicio…', 'Ventanas de PVC', 'Puertas de PVC', 'Canceles de Baño', 'Divisiones de Oficina', 'Proyecto completo de cancelería', 'Proyecto completo'];
-        Array.from(servicioSelect.options).forEach((opt, i) => {
-          opt.text = servOpts[i] || opt.text;
-        });
+        const servOpts = lang === 'en'
+          ? ['Select a service…', 'Windows', 'PVC Doors', 'Bathroom Partitions', 'Office Dividers', 'Full Frame Project', 'Complete Project']
+          : ['Selecciona un servicio…', 'Ventanas', 'Puertas de PVC', 'Canceles de Baño', 'Divisiones de Oficina', 'Proyecto completo de cancelería', 'Proyecto completo'];
+        Array.from(servicioSelect.options).forEach((opt, i) => { opt.text = servOpts[i] || opt.text; });
       }
-
       const presupuestoSelect = document.querySelector('select[name="presupuesto"]');
       if (presupuestoSelect) {
         const presOpts = lang === 'en'
           ? ['Select a range…', 'Less than $10,000 MXN', '$10,000 – $30,000 MXN', '$30,000 – $60,000 MXN', '$60,000 – $100,000 MXN', 'More than $100,000 MXN']
           : ['Selecciona un rango…', 'Menos de $10,000 MXN', '$10,000 – $30,000 MXN', '$30,000 – $60,000 MXN', '$60,000 – $100,000 MXN', 'Más de $100,000 MXN'];
-        Array.from(presupuestoSelect.options).forEach((opt, i) => {
-          opt.text = presOpts[i] || opt.text;
-        });
+        Array.from(presupuestoSelect.options).forEach((opt, i) => { opt.text = presOpts[i] || opt.text; });
       }
-
-      // Actualizar lang del html
       document.documentElement.lang = lang === 'es' ? 'es' : 'en';
     });
   });
 
-  // ─── 12. ANIMACIONES DE SCROLL MEJORADAS ───
-  // Agrega clase .reveal a secciones y stagger a grids
   document.querySelectorAll('.section-eyebrow, .section-title, .section-desc').forEach(el => {
-    if (!el.closest('#hero')) {
-      el.classList.add('reveal');
-    }
+    if (!el.closest('#hero')) el.classList.add('reveal');
   });
-
   document.querySelectorAll('.porque-item').forEach((el, i) => {
     el.classList.add('reveal', 'reveal-delay-' + (i + 1));
   });
-
   const enhancedObserver = new IntersectionObserver((entries) => {
-    entries.forEach(e => {
-      if (e.isIntersecting) {
-        e.target.classList.add('visible');
-      }
-    });
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
   }, { threshold: 0.1 });
-
   document.querySelectorAll('.reveal').forEach(el => enhancedObserver.observe(el));
 </script>
 
