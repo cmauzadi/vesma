@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Ventanas Europeas SMA – Cancelería de Aluminio en San Miguel de Allende</title>
-  <meta name="description" content="Especialistas en ventanas, puertas y canceles de aluminio y PVC en San Miguel de Allende. Fabricación e instalación a medida con garantía. Cotiza gratis."/>
-  <meta name="keywords" content="ventanas aluminio San Miguel de Allende, cancelería, puertas aluminio, canceles de baño, PVC, REHAU, Salamander, Cuprum"/>
+  <title>Ventanas Europeas SMA – Ventanas y Puertas de PVC en San Miguel de Allende</title>
+  <meta name="description" content="Especialistas en ventanas, puertas y canceles de PVC en San Miguel de Allende. Fabricación e instalación a medida con garantía. Cotiza gratis."/>
+  <meta name="keywords" content="ventanas PVC San Miguel de Allende, cancelería, puertas PVC, canceles de baño, REHAU, Salamander, Cuprum"/>
   <meta name="author" content="Ventanas Europeas SMA"/>
 
   <!-- Open Graph (WhatsApp, Facebook, iMessage) -->
-  <meta property="og:title" content="Ventanas Europeas SMA – Cancelería de Aluminio"/>
+  <meta property="og:title" content="Ventanas Europeas SMA – Ventanas y Puertas de PVC"/>
   <meta property="og:description" content="Ventanas, puertas y canceles a medida en San Miguel de Allende. +10 años de experiencia. Cotiza sin compromiso."/>
   <meta property="og:image" content="https://lh3.googleusercontent.com/d/1FVVshFpzKrSDobRjK45kFbXSYQMZEozq"/>
   <meta property="og:type" content="website"/>
@@ -18,7 +18,7 @@
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image"/>
   <meta name="twitter:title" content="Ventanas Europeas SMA"/>
-  <meta name="twitter:description" content="Cancelería de aluminio y PVC en San Miguel de Allende. Cotiza gratis."/>
+  <meta name="twitter:description" content="Cancelería de PVC en San Miguel de Allende. Cotiza gratis."/>
   <meta name="twitter:image" content="https://lh3.googleusercontent.com/d/1FVVshFpzKrSDobRjK45kFbXSYQMZEozq"/>
 
   <link rel="icon" type="image/png" href="https://lh3.googleusercontent.com/d/1Qyr-A4GFK58HiX5yFdhuHFHFB2GsPdqy"/>
@@ -747,6 +747,25 @@
     }
     .apertura-card:hover .apertura-video video {
       opacity: 1;
+    }
+
+    /* Play hint overlay */
+    .apertura-play-hint {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(26, 26, 46, 0.4);
+      color: rgba(253, 246, 236, 0.7);
+      font-size: 0.78rem;
+      letter-spacing: 0.08em;
+      font-weight: 400;
+      transition: opacity 0.3s ease;
+      pointer-events: none;
+    }
+    .apertura-card:hover .apertura-play-hint {
+      opacity: 0;
     }
 
     /* Info section */
@@ -1575,15 +1594,15 @@
   <div class="hero-text">
     <p class="hero-eyebrow" data-es="Contratistas · San Miguel de Allende" data-en="Contractors · San Miguel de Allende">Contratistas · San Miguel de Allende</p>
     <h1 class="hero-title" data-es-html="Construcción<br>con <span>calidad</span><br>y precisión" data-en-html="Construction<br>with <span>quality</span><br>and precision">Construcción<br>con <span>calidad</span><br>y precisión</h1>
-    <p class="hero-sub" data-es="Especialistas en cancelería de aluminio: ventanas, puertas y canceles a medida. Instalación profesional con garantía en San Miguel de Allende." data-en="Specialists in aluminum frames: custom windows, doors and partitions. Professional installation with warranty in San Miguel de Allende.">Especialistas en cancelería de aluminio: ventanas, puertas y canceles a medida. Instalación profesional con garantía en San Miguel de Allende.</p>
+    <p class="hero-sub" data-es="Especialistas en cancelería de PVC: ventanas, puertas y canceles a medida. Instalación profesional con garantía en San Miguel de Allende." data-en="Specialists in PVC frames: custom windows, doors and partitions. Professional installation with warranty in San Miguel de Allende.">Especialistas en cancelería de PVC: ventanas, puertas y canceles a medida. Instalación profesional con garantía en San Miguel de Allende.</p>
     <a href="#contacto" class="btn-primary" data-es="Solicitar Cotización" data-en="Request a Quote">Solicitar Cotización</a>
   </div>
   <div class="hero-visual">
     <div class="slideshow">
       <div class="slide active">
         <div class="slide-overlay"></div>
-        <img src="https://lh3.googleusercontent.com/d/1FVVshFpzKrSDobRjK45kFbXSYQMZEozq" alt="Cancelería de aluminio negro estilo europeo" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;"/>
-        <div class="slide-caption">Cancelería de aluminio negro estilo europeo</div>
+        <img src="https://lh3.googleusercontent.com/d/1FVVshFpzKrSDobRjK45kFbXSYQMZEozq" alt="Cancelería estilo europeo" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;"/>
+        <div class="slide-caption">Cancelería estilo europeo</div>
       </div>
       <div class="slide">
         <div class="slide-overlay"></div>
@@ -1655,7 +1674,7 @@
     <div class="porque-item">
       <div class="porque-num">02</div>
       <h3 data-es="Materiales Premium" data-en="Premium Materials">Materiales Premium</h3>
-      <p data-es="Trabajamos con REHAU, Salamander y Cuprum — las marcas líderes mundiales en perfiles de aluminio y PVC con garantía de fábrica." data-en="We work with REHAU, Salamander and Cuprum — world-leading brands in aluminum and PVC profiles with factory warranty.">Trabajamos con REHAU, Salamander y Cuprum — las marcas líderes mundiales en perfiles de aluminio y PVC con garantía de fábrica.</p>
+      <p data-es="Trabajamos con REHAU, Salamander y Cuprum — las marcas líderes mundiales en perfiles de PVC con garantía de fábrica." data-en="We work with REHAU, Salamander and Cuprum — world-leading brands in PVC profiles with factory warranty.">Trabajamos con REHAU, Salamander y Cuprum — las marcas líderes mundiales en perfiles de PVC con garantía de fábrica.</p>
     </div>
     <div class="porque-item">
       <div class="porque-num">03</div>
@@ -1676,22 +1695,22 @@
 <section id="servicios">
   <p class="section-eyebrow" data-es="Lo que hacemos" data-en="What we do">Lo que hacemos</p>
   <h2 class="section-title" data-es="Nuestros Servicios" data-en="Our Services">Nuestros Servicios</h2>
-  <p class="section-desc" data-es="Somos especialistas en cancelería de aluminio de alta calidad. Fabricamos e instalamos a medida para casas, oficinas y locales comerciales." data-en="We are specialists in high-quality aluminum frames. We manufacture and install custom solutions for homes, offices and commercial spaces.">Somos especialistas en cancelería de aluminio de alta calidad. Fabricamos e instalamos a medida para casas, oficinas y locales comerciales.</p>
+  <p class="section-desc" data-es="Somos especialistas en cancelería de alta calidad. Fabricamos e instalamos a medida para casas, oficinas y locales comerciales." data-en="We are specialists in high-quality PVC frames. We manufacture and install custom solutions for homes, offices and commercial spaces.">Somos especialistas en cancelería de alta calidad. Fabricamos e instalamos a medida para casas, oficinas y locales comerciales.</p>
   <div class="services-grid">
-    <a href="#contacto" class="service-card" data-servicio="Ventanas de Aluminio">
+    <a href="#contacto" class="service-card" data-servicio="Ventanas de PVC">
       <div class="service-icon">🪟</div>
-      <h3 data-es="Ventanas de Aluminio" data-en="Aluminum Windows">Ventanas de Aluminio</h3>
-      <p data-es="Ventanas corredizas, abatibles y proyectables. Perfiles de aluminio de alta resistencia con cristal templado o laminado según tu necesidad." data-en="Sliding, casement and projecting windows. High-resistance aluminum profiles with tempered or laminated glass according to your needs.">Ventanas corredizas, abatibles y proyectables. Perfiles de aluminio de alta resistencia con cristal templado o laminado según tu necesidad.</p>
+      <h3 data-es="Ventanas de PVC" data-en="PVC Windows">Ventanas de PVC</h3>
+      <p data-es="Ventanas corredizas, abatibles y proyectables. Perfiles de alta resistencia con cristal templado o laminado según tu necesidad." data-en="Sliding, casement and projecting windows. High-resistance profiles with tempered or laminated glass according to your needs.">Ventanas corredizas, abatibles y proyectables. Perfiles de alta resistencia con cristal templado o laminado según tu necesidad.</p>
     </a>
-    <a href="#contacto" class="service-card" data-servicio="Puertas de Aluminio">
+    <a href="#contacto" class="service-card" data-servicio="Puertas de PVC">
       <div class="service-icon">🚪</div>
       <h3 data-es="Puertas" data-en="Doors">Puertas</h3>
-      <p data-es="Puertas de entrada, interiores y de servicio en aluminio. Diseños modernos y clásicos con sistemas de seguridad y acabados de primera." data-en="Entry, interior and service doors in aluminum. Modern and classic designs with security systems and premium finishes.">Puertas de entrada, interiores y de servicio en aluminio. Diseños modernos y clásicos con sistemas de seguridad y acabados de primera.</p>
+      <p data-es="Puertas de entrada, interiores y de servicio. Diseños modernos y clásicos con sistemas de seguridad y acabados de primera." data-en="Entry, interior and service doors. Modern and classic designs with security systems and premium finishes.">Puertas de entrada, interiores y de servicio. Diseños modernos y clásicos con sistemas de seguridad y acabados de primera.</p>
     </a>
     <a href="#contacto" class="service-card" data-servicio="Divisiones de Oficina">
       <div class="service-icon">🏢</div>
       <h3 data-es="Canceles y Divisorios" data-en="Partitions & Dividers">Canceles y Divisorios</h3>
-      <p data-es="Canceles de baño, divisiones de oficina y fachadas de aluminio y cristal. Soluciones elegantes que aprovechan al máximo el espacio." data-en="Bathroom partitions, office dividers and aluminum-glass facades. Elegant solutions that maximize your space.">Canceles de baño, divisiones de oficina y fachadas de aluminio y cristal. Soluciones elegantes que aprovechan al máximo el espacio.</p>
+      <p data-es="Canceles de baño y divisiones de oficina. Soluciones elegantes que aprovechan al máximo el espacio." data-en="Bathroom partitions and office dividers. Elegant solutions that maximize your space.">Canceles de baño y divisiones de oficina. Soluciones elegantes que aprovechan al máximo el espacio.</p>
     </a>
   </div>
 </section>
@@ -1730,13 +1749,12 @@
     <button class="gallery-tab active" data-category="ventanas" data-es="🪟 Ventanas" data-en="🪟 Windows">🪟 Ventanas</button>
     <button class="gallery-tab" data-category="puertas" data-es="🚪 Puertas" data-en="🚪 Doors">🚪 Puertas</button>
     <button class="gallery-tab" data-category="canceles" data-es="🏢 Canceles" data-en="🏢 Partitions">🏢 Canceles</button>
-    <button class="gallery-tab" data-category="fachadas" data-es="✨ Fachadas" data-en="✨ Facades">✨ Fachadas</button>
   </div>
 
   <!-- ── Categoría: Ventanas ── -->
   <div class="gallery-category active" data-category="ventanas">
     <div class="gallery-item">
-      <img src="https://placehold.co/800x600/d4a245/ffffff?text=Ventana+Corrediza" alt="Ventana corrediza de aluminio"/>
+      <img src="https://placehold.co/800x600/d4a245/ffffff?text=Ventana+Corrediza" alt="Ventana corrediza"/>
       <div class="gallery-label"><span>Ventana Corrediza</span></div>
     </div>
     <div class="gallery-item">
@@ -1760,7 +1778,7 @@
   <!-- ── Categoría: Puertas ── -->
   <div class="gallery-category" data-category="puertas">
     <div class="gallery-item">
-      <img src="https://placehold.co/800x600/d4a245/ffffff?text=Puerta+Principal" alt="Puerta principal de aluminio"/>
+      <img src="https://placehold.co/800x600/d4a245/ffffff?text=Puerta+Principal" alt="Puerta principal"/>
       <div class="gallery-label"><span>Puerta Principal</span></div>
     </div>
     <div class="gallery-item">
@@ -1805,28 +1823,6 @@
     </div>
   </div>
 
-  <!-- ── Categoría: Fachadas ── -->
-  <div class="gallery-category" data-category="fachadas">
-    <div class="gallery-item">
-      <img src="https://placehold.co/800x600/d4a245/ffffff?text=Fachada+Comercial" alt="Fachada comercial de aluminio"/>
-      <div class="gallery-label"><span>Fachada Comercial</span></div>
-    </div>
-    <div class="gallery-item">
-      <img src="https://placehold.co/800x600/b8862e/ffffff?text=Fachada+Residencial" alt="Fachada residencial moderna"/>
-      <div class="gallery-label"><span>Fachada Residencial</span></div>
-    </div>
-    <div class="gallery-item">
-      <img src="https://placehold.co/800x600/1a1a2e/d4a245?text=Muro+Cortina" alt="Muro cortina de cristal"/>
-      <div class="gallery-label"><span>Muro Cortina de Cristal</span></div>
-    </div>
-    <div class="gallery-item">
-      <img src="https://placehold.co/800x600/2d2d5e/fdf6ec?text=Fachada+Mixta" alt="Fachada mixta aluminio y cantera"/>
-      <div class="gallery-label"><span>Fachada Mixta Aluminio y Cantera</span></div>
-    </div>
-    <div class="gallery-item">
-      <img src="https://placehold.co/800x600/e8dcc8/1a1a2e?text=Vitrina+Local" alt="Vitrina para local comercial"/>
-      <div class="gallery-label"><span>Vitrina Local Comercial</span></div>
-    </div>
   </div>
 </section>
 
@@ -1845,6 +1841,7 @@
         <video muted loop playsinline preload="metadata" poster="https://placehold.co/400x300/1a1a2e/d4a245?text=Abatible">
           <!-- <source src="TU_VIDEO_ABATIBLE.mp4" type="video/mp4"> -->
         </video>
+        <div class="apertura-play-hint" data-es="▶ Pasar cursor para ver" data-en="▶ Hover to preview">▶ Pasar cursor para ver</div>
       </div>
       <div class="apertura-info">
         <h3 data-es="Abatible" data-en="Casement">Abatible</h3>
@@ -1858,6 +1855,7 @@
         <video muted loop playsinline preload="metadata" poster="https://placehold.co/400x300/1a1a2e/d4a245?text=Proyectante">
           <!-- <source src="TU_VIDEO_PROYECTANTE.mp4" type="video/mp4"> -->
         </video>
+        <div class="apertura-play-hint" data-es="▶ Pasar cursor para ver" data-en="▶ Hover to preview">▶ Pasar cursor para ver</div>
       </div>
       <div class="apertura-info">
         <h3 data-es="Proyectante" data-en="Awning">Proyectante</h3>
@@ -1871,6 +1869,7 @@
         <video muted loop playsinline preload="metadata" poster="https://placehold.co/400x300/1a1a2e/d4a245?text=Oscilobatiente">
           <!-- <source src="TU_VIDEO_OSCILOBATIENTE.mp4" type="video/mp4"> -->
         </video>
+        <div class="apertura-play-hint" data-es="▶ Pasar cursor para ver" data-en="▶ Hover to preview">▶ Pasar cursor para ver</div>
       </div>
       <div class="apertura-info">
         <h3 data-es="Oscilobatiente" data-en="Tilt & Turn">Oscilobatiente</h3>
@@ -1884,6 +1883,7 @@
         <video muted loop playsinline preload="metadata" poster="https://placehold.co/400x300/1a1a2e/d4a245?text=Corrediza">
           <!-- <source src="TU_VIDEO_CORREDIZA.mp4" type="video/mp4"> -->
         </video>
+        <div class="apertura-play-hint" data-es="▶ Pasar cursor para ver" data-en="▶ Hover to preview">▶ Pasar cursor para ver</div>
       </div>
       <div class="apertura-info">
         <h3 data-es="Corrediza" data-en="Sliding">Corrediza</h3>
@@ -1897,6 +1897,7 @@
         <video muted loop playsinline preload="metadata" poster="https://placehold.co/400x300/1a1a2e/d4a245?text=Corredera+Elevable">
           <!-- <source src="TU_VIDEO_CORREDERA_ELEVABLE.mp4" type="video/mp4"> -->
         </video>
+        <div class="apertura-play-hint" data-es="▶ Pasar cursor para ver" data-en="▶ Hover to preview">▶ Pasar cursor para ver</div>
       </div>
       <div class="apertura-info">
         <h3 data-es="Corredera Elevable" data-en="Lift & Slide">Corredera Elevable</h3>
@@ -1910,6 +1911,7 @@
         <video muted loop playsinline preload="metadata" poster="https://placehold.co/400x300/1a1a2e/d4a245?text=Practicable">
           <!-- <source src="TU_VIDEO_PRACTICABLE.mp4" type="video/mp4"> -->
         </video>
+        <div class="apertura-play-hint" data-es="▶ Pasar cursor para ver" data-en="▶ Hover to preview">▶ Pasar cursor para ver</div>
       </div>
       <div class="apertura-info">
         <h3 data-es="Practicable Interior y Exterior" data-en="Inward & Outward Opening">Practicable Interior y Exterior</h3>
@@ -2018,11 +2020,11 @@
         <label data-es="Servicio que necesitas *" data-en="Service you need *">Servicio que necesitas *</label>
         <select name="servicio" required>
           <option value="">Selecciona un servicio…</option>
-          <option>Ventanas de Aluminio</option>
-          <option>Puertas de Aluminio</option>
+          <option>Ventanas de PVC</option>
+          <option>Puertas de PVC</option>
           <option>Canceles de Baño</option>
           <option>Divisiones de Oficina</option>
-          <option>Fachada de Aluminio y Cristal</option>
+          <option>Proyecto completo de cancelería</option>
           <option>Proyecto completo</option>
         </select>
       </div>
@@ -2099,11 +2101,11 @@
     <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
     <span>WhatsApp</span>
   </a>
-  <a href="https://facebook.com/" target="_blank" rel="noopener" class="social-facebook" title="Facebook">
+  <a href="https://www.facebook.com/share/1bWiSEJ23M/?mibextid=wwXIfr" target="_blank" rel="noopener" class="social-facebook" title="Facebook">
     <svg viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
     <span>Facebook</span>
   </a>
-  <a href="https://tiktok.com/" target="_blank" rel="noopener" class="social-tiktok" title="TikTok">
+  <a href="https://www.tiktok.com/@ventanaseuropeas9?_r=1&_t=ZS-94JBDzEPTYi" target="_blank" rel="noopener" class="social-tiktok" title="TikTok">
     <svg viewBox="0 0 24 24"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg>
     <span>TikTok</span>
   </a>
@@ -2574,8 +2576,8 @@
       const servicioSelect = document.querySelector('select[name="servicio"]');
       if (servicioSelect) {
         const servOpts = lang === 'en' 
-          ? ['Select a service…', 'Aluminum Windows', 'Aluminum Doors', 'Bathroom Partitions', 'Office Dividers', 'Aluminum & Glass Facade', 'Complete Project']
-          : ['Selecciona un servicio…', 'Ventanas de Aluminio', 'Puertas de Aluminio', 'Canceles de Baño', 'Divisiones de Oficina', 'Fachada de Aluminio y Cristal', 'Proyecto completo'];
+          ? ['Select a service…', 'PVC Windows', 'Aluminum Doors', 'Bathroom Partitions', 'Office Dividers', 'Full Frame Project', 'Complete Project']
+          : ['Selecciona un servicio…', 'Ventanas de PVC', 'Puertas de PVC', 'Canceles de Baño', 'Divisiones de Oficina', 'Proyecto completo de cancelería', 'Proyecto completo'];
         Array.from(servicioSelect.options).forEach((opt, i) => {
           opt.text = servOpts[i] || opt.text;
         });
