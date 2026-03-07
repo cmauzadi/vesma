@@ -733,41 +733,14 @@
       overflow: hidden;
       background: #0f0f1e;
     }
-    .apertura-video video,
     .apertura-video img {
       width: 100%;
       height: 100%;
       object-fit: cover;
       display: block;
     }
-    /* Poster image shown before hover (from poster attribute) */
-    .apertura-video video {
-      opacity: 0.7;
-      transition: opacity 0.4s ease;
-    }
-    .apertura-card:hover .apertura-video video {
-      opacity: 1;
-    }
 
     /* Play hint overlay */
-    .apertura-play-hint {
-      position: absolute;
-      inset: 0;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: rgba(26, 26, 46, 0.4);
-      color: rgba(253, 246, 236, 0.7);
-      font-size: 0.78rem;
-      letter-spacing: 0.08em;
-      font-weight: 400;
-      transition: opacity 0.3s ease;
-      pointer-events: none;
-    }
-    .apertura-card:hover .apertura-play-hint {
-      opacity: 0;
-    }
-
     /* Info section */
     .apertura-info {
       padding: 1.5rem;
@@ -1838,24 +1811,7 @@
 
     <div class="apertura-card">
       <div class="apertura-video">
-        <video muted loop playsinline preload="metadata" poster="https://placehold.co/400x300/1a1a2e/d4a245?text=Abatible">
-          <!-- <source src="TU_VIDEO_ABATIBLE.mp4" type="video/mp4"> -->
-        </video>
-        <div class="apertura-play-hint" data-es="▶ Pasar cursor para ver" data-en="▶ Hover to preview">▶ Pasar cursor para ver</div>
-      </div>
-      <div class="apertura-info">
-        <h3 data-es="Abatible" data-en="Casement">Abatible</h3>
-        <p data-es="Se abre hacia adentro o afuera girando sobre bisagras laterales. Ideal para ventanas que necesitan apertura completa y máxima ventilación." data-en="Opens inward or outward rotating on side hinges. Ideal for windows that need full opening and maximum ventilation.">Se abre hacia adentro o afuera girando sobre bisagras laterales. Ideal para ventanas que necesitan apertura completa y máxima ventilación.</p>
-        <a href="#contacto" class="apertura-cta" data-es="Cotizar →" data-en="Quote →">Cotizar →</a>
-      </div>
-    </div>
-
-    <div class="apertura-card">
-      <div class="apertura-video">
-        <video muted loop playsinline preload="metadata" poster="https://placehold.co/400x300/1a1a2e/d4a245?text=Proyectante">
-          <!-- <source src="TU_VIDEO_PROYECTANTE.mp4" type="video/mp4"> -->
-        </video>
-        <div class="apertura-play-hint" data-es="▶ Pasar cursor para ver" data-en="▶ Hover to preview">▶ Pasar cursor para ver</div>
+        <img src="https://lh3.googleusercontent.com/d/1PKw98oXWIaH8fxAxzxtPIyZ-nDFS47rM" alt="Proyectante" loading="lazy"/>
       </div>
       <div class="apertura-info">
         <h3 data-es="Proyectante" data-en="Awning">Proyectante</h3>
@@ -1866,10 +1822,7 @@
 
     <div class="apertura-card">
       <div class="apertura-video">
-        <video muted loop playsinline preload="metadata" poster="https://placehold.co/400x300/1a1a2e/d4a245?text=Oscilobatiente">
-          <!-- <source src="TU_VIDEO_OSCILOBATIENTE.mp4" type="video/mp4"> -->
-        </video>
-        <div class="apertura-play-hint" data-es="▶ Pasar cursor para ver" data-en="▶ Hover to preview">▶ Pasar cursor para ver</div>
+        <img src="https://lh3.googleusercontent.com/d/1X8ObYgq246BF3jHVruk9Joxyyo6x4y3w" alt="Oscilobatiente" loading="lazy"/>
       </div>
       <div class="apertura-info">
         <h3 data-es="Oscilobatiente" data-en="Tilt & Turn">Oscilobatiente</h3>
@@ -1880,10 +1833,7 @@
 
     <div class="apertura-card">
       <div class="apertura-video">
-        <video muted loop playsinline preload="metadata" poster="https://placehold.co/400x300/1a1a2e/d4a245?text=Corrediza">
-          <!-- <source src="TU_VIDEO_CORREDIZA.mp4" type="video/mp4"> -->
-        </video>
-        <div class="apertura-play-hint" data-es="▶ Pasar cursor para ver" data-en="▶ Hover to preview">▶ Pasar cursor para ver</div>
+        <img src="https://lh3.googleusercontent.com/d/100py_g9s2o1GlAZbRVuNR5PiVKyh0YCK" alt="Corrediza" loading="lazy"/>
       </div>
       <div class="apertura-info">
         <h3 data-es="Corrediza" data-en="Sliding">Corrediza</h3>
@@ -1894,10 +1844,7 @@
 
     <div class="apertura-card">
       <div class="apertura-video">
-        <video muted loop playsinline preload="metadata" poster="https://placehold.co/400x300/1a1a2e/d4a245?text=Corredera+Elevable">
-          <!-- <source src="TU_VIDEO_CORREDERA_ELEVABLE.mp4" type="video/mp4"> -->
-        </video>
-        <div class="apertura-play-hint" data-es="▶ Pasar cursor para ver" data-en="▶ Hover to preview">▶ Pasar cursor para ver</div>
+        <img src="https://lh3.googleusercontent.com/d/1creuoHJEMHE9ZT94wKgmBmC8OexzziEw" alt="Corredera Elevable" loading="lazy"/>
       </div>
       <div class="apertura-info">
         <h3 data-es="Corredera Elevable" data-en="Lift & Slide">Corredera Elevable</h3>
@@ -1908,14 +1855,22 @@
 
     <div class="apertura-card">
       <div class="apertura-video">
-        <video muted loop playsinline preload="metadata" poster="https://placehold.co/400x300/1a1a2e/d4a245?text=Practicable">
-          <!-- <source src="TU_VIDEO_PRACTICABLE.mp4" type="video/mp4"> -->
-        </video>
-        <div class="apertura-play-hint" data-es="▶ Pasar cursor para ver" data-en="▶ Hover to preview">▶ Pasar cursor para ver</div>
+        <img src="https://lh3.googleusercontent.com/d/1fvH2dmpxhJIvww2lPj2SjoT3jvcE4jjl" alt="Practicable Interior" loading="lazy"/>
       </div>
       <div class="apertura-info">
-        <h3 data-es="Practicable Interior y Exterior" data-en="Inward & Outward Opening">Practicable Interior y Exterior</h3>
-        <p data-es="Apertura clásica de hoja completa, disponible hacia adentro o hacia afuera según tu necesidad. Máximo sellado hermético y aislamiento acústico." data-en="Classic full-leaf opening, available inward or outward. Maximum airtight sealing and acoustic insulation.">Apertura clásica de hoja completa, disponible hacia adentro o hacia afuera según tu necesidad. Máximo sellado hermético y aislamiento acústico.</p>
+        <h3 data-es="Practicable Interior" data-en="Inward Opening">Practicable Interior</h3>
+        <p data-es="La hoja se abre completamente hacia el interior del espacio. Ideal para limpieza fácil desde adentro y máximo sellado hermético." data-en="The leaf opens fully inward. Ideal for easy cleaning from inside and maximum airtight sealing.">La hoja se abre completamente hacia el interior del espacio. Ideal para limpieza fácil desde adentro y máximo sellado hermético.</p>
+        <a href="#contacto" class="apertura-cta" data-es="Cotizar →" data-en="Quote →">Cotizar →</a>
+      </div>
+    </div>
+
+    <div class="apertura-card">
+      <div class="apertura-video">
+        <img src="https://lh3.googleusercontent.com/d/1DxoKHJjTwbr4jKRjnArwXCIHZlg_ub3H" alt="Practicable Exterior" loading="lazy"/>
+      </div>
+      <div class="apertura-info">
+        <h3 data-es="Practicable Exterior" data-en="Outward Opening">Practicable Exterior</h3>
+        <p data-es="La hoja se abre hacia afuera, liberando espacio interior. Perfecta para habitaciones pequeñas donde cada centímetro cuenta." data-en="The leaf opens outward, freeing interior space. Perfect for small rooms where every inch counts.">La hoja se abre hacia afuera, liberando espacio interior. Perfecta para habitaciones pequeñas donde cada centímetro cuenta.</p>
         <a href="#contacto" class="apertura-cta" data-es="Cotizar →" data-en="Quote →">Cotizar →</a>
       </div>
     </div>
@@ -1939,11 +1894,11 @@
       <h3 data-es="Colores de Laminado REHAU" data-en="REHAU Laminate Colors">Colores de Laminado REHAU</h3>
       <p data-es="Acabados estilo madera como Nussbaum, Golden Oak y Sheffield, tonos modernos como Anthracite Grey y Jet Black, y colores base como Blanco, Clay y Beige. Consulta todas las opciones disponibles." data-en="Wood-style finishes like Nussbaum, Golden Oak and Sheffield, modern tones like Anthracite Grey and Jet Black, and base colors like White, Clay and Beige. Check all available options.">Acabados estilo madera como Nussbaum, Golden Oak y Sheffield, tonos modernos como Anthracite Grey y Jet Black, y colores base como Blanco, Clay y Beige. Consulta todas las opciones disponibles.</p>
       <div class="catalog-actions">
-        <a href="flyer-colores-de-laminado.pdf" target="_blank" class="catalog-btn catalog-btn-view">
+        <a href="https://drive.google.com/file/d/10ZB_7bDURJNLLLqrzTTESwvGDtdiQVcr/view?usp=sharing" target="_blank" class="catalog-btn catalog-btn-view">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
           Ver PDF
         </a>
-        <a href="flyer-colores-de-laminado.pdf" download class="catalog-btn catalog-btn-download">
+        <a href="https://drive.google.com/uc?export=download&id=10ZB_7bDURJNLLLqrzTTESwvGDtdiQVcr" class="catalog-btn catalog-btn-download">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
           Descargar
         </a>
@@ -2467,29 +2422,8 @@
     el.style.transition = 'opacity .6s ease, transform .6s ease';
     revealObserver.observe(el);
   });
-  // ─── 9. VIDEOS DE APERTURA — Play en hover ───
-  document.querySelectorAll('.apertura-card').forEach(card => {
-    const video = card.querySelector('video');
-    if (!video) return;
-
-    card.addEventListener('mouseenter', () => {
-      video.play().catch(() => {}); // catch silencioso si no tiene source aún
-    });
-    card.addEventListener('mouseleave', () => {
-      video.pause();
-      video.currentTime = 0;
-    });
-
-    // En móvil: play al tocar, pause al tocar de nuevo
-    card.addEventListener('touchstart', () => {
-      if (video.paused) {
-        video.play().catch(() => {});
-      } else {
-        video.pause();
-        video.currentTime = 0;
-      }
-    }, { passive: true });
-  });
+  // ─── 9. GIFS DE APERTURA ───
+  // Los GIFs se reproducen automáticamente con <img>, no necesitan JS
 
   // ─── 10. CONTADORES ANIMADOS ───
   // Anima los números de 0 al valor final cuando entran en viewport
