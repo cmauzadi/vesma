@@ -554,7 +554,7 @@
     #servicios .section-desc { color: var(--sand); }
     .services-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(4, 1fr);
       gap: 1.5rem;
       margin-top: 3.5rem;
     }
@@ -1450,7 +1450,7 @@
       .stat-label { font-size: 0.55rem; }
       section { padding: 4rem 2rem; }
       #servicios { padding: 4rem 2rem; }
-      .services-grid { grid-template-columns: 1fr; }
+      .services-grid { grid-template-columns: 1fr 1fr; }
       .gallery-category {
         grid-template-columns: 1fr 1fr;
         grid-template-rows: auto;
@@ -1494,7 +1494,7 @@
     <a href="#aperturas" data-section="aperturas" data-es="Aperturas" data-en="Opening Types">Aperturas</a>
     <a href="#catalogo" data-section="catalogo" data-es="Colores" data-en="Colors">Colores</a>
     <a href="#contacto" data-section="contacto" data-es="Contacto" data-en="Contact">Contacto</a>
-    <a href="https://wa.me/524151182417" class="nav-cta" target="_blank">
+    <a href="https://wa.me/524151399888" class="nav-cta" target="_blank">
       💬 WhatsApp
     </a>
     <div class="lang-toggle" id="langToggle">
@@ -1512,7 +1512,7 @@
 <section id="hero">
   <div class="hero-text">
     <p class="hero-eyebrow" data-es="Contratistas · San Miguel de Allende" data-en="Contractors · San Miguel de Allende">Contratistas · San Miguel de Allende</p>
-    <h1 class="hero-title" data-es-html="Construcción<br>con <span>calidad</span><br>y precisión" data-en-html="Construction<br>with <span>quality</span><br>and precision">Construcción<br>con <span>calidad</span><br>y precisión</h1>
+    <h1 class="hero-title" data-es-html="Fabricación<br>con <span>calidad</span><br>y precisión" data-en-html="Fabrication<br>with <span>quality</span><br>and precision">Fabricación<br>con <span>calidad</span><br>y precisión</h1>
     <p class="hero-sub" data-es="Especialistas en cancelería de aluminio y PVC: ventanas, puertas y canceles a medida. Instalación profesional con garantía en San Miguel de Allende." data-en="Specialists in aluminum and PVC frames: custom windows, doors and partitions. Professional installation with warranty in San Miguel de Allende.">Especialistas en cancelería de aluminio y PVC: ventanas, puertas y canceles a medida. Instalación profesional con garantía en San Miguel de Allende.</p>
     <a href="#contacto" class="btn-primary" data-es="Solicitar Cotización" data-en="Request a Quote">Solicitar Cotización</a>
   </div>
@@ -1628,6 +1628,11 @@
       <h3 data-es="Canceles y Divisorios" data-en="Partitions & Dividers">Canceles y Divisorios</h3>
       <p data-es="Canceles de baño y divisiones de oficina. Soluciones elegantes que aprovechan al máximo el espacio." data-en="Bathroom partitions and office dividers. Elegant solutions that maximize your space.">Canceles de baño y divisiones de oficina. Soluciones elegantes que aprovechan al máximo el espacio.</p>
     </a>
+    <a href="#contacto" class="service-card" data-servicio="Mosquiteros">
+      <div class="service-icon">🦟</div>
+      <h3 data-es="Mosquiteros" data-en="Mosquito Screens">Mosquiteros</h3>
+      <p data-es="Mosquiteros fijos, corredizos y enrollables para ventanas y puertas. Protección contra insectos sin sacrificar ventilación ni visibilidad." data-en="Fixed, sliding and retractable mosquito screens for windows and doors. Insect protection without sacrificing ventilation or visibility.">Mosquiteros fijos, corredizos y enrollables para ventanas y puertas. Protección contra insectos sin sacrificar ventilación ni visibilidad.</p>
+    </a>
   </div>
 </section>
 
@@ -1658,6 +1663,7 @@
     <button class="gallery-tab active" data-category="ventanas" data-es="🪟 Ventanas" data-en="🪟 Windows">🪟 Ventanas</button>
     <button class="gallery-tab" data-category="puertas" data-es="🚪 Puertas" data-en="🚪 Doors">🚪 Puertas</button>
     <button class="gallery-tab" data-category="canceles" data-es="🏢 Canceles" data-en="🏢 Partitions">🏢 Canceles</button>
+    <button class="gallery-tab" data-category="mosquiteros" data-es="🦟 Mosquiteros" data-en="🦟 Screens">🦟 Mosquiteros</button>
   </div>
 
   <div class="gallery-category active" data-category="ventanas">
@@ -1721,6 +1727,14 @@
     </div>
   </div>
   <button class="gallery-show-more" id="btnShowMore" data-es="Ver más ↓" data-en="Show more ↓">Ver más ↓</button>
+
+  <!-- ── Categoría: Mosquiteros ── -->
+  <div class="gallery-category" data-category="mosquiteros">
+    <div class="gallery-item" style="grid-column: 1 / -1; max-width: 480px;">
+      <img src="https://lh3.googleusercontent.com/d/1x0rv4JQWqwPy7FzLzwyZr6cJXAa6AyQC" alt="Mosquitero enrollable"/>
+      <div class="gallery-label"><span>Mosquitero Enrollable</span></div>
+    </div>
+  </div>
 
 </section>
 
@@ -1829,14 +1843,7 @@
       <div class="contact-icon">📞</div>
       <div class="contact-item-text">
         <strong data-es="Teléfono / WhatsApp" data-en="Phone / WhatsApp">Teléfono / WhatsApp</strong>
-        <span><a href="https://wa.me/524151182417" target="_blank">415 118 2417</a></span>
-      </div>
-    </div>
-    <div class="contact-item">
-      <div class="contact-icon">📱</div>
-      <div class="contact-item-text">
-        <strong data-es="Segundo contacto" data-en="Second contact">Segundo contacto</strong>
-        <span><a href="https://wa.me/525523395018" target="_blank">55 2339 5018</a></span>
+        <span><a href="https://wa.me/524151399888" target="_blank">415 139 9888</a></span>
       </div>
     </div>
     <div class="contact-item">
@@ -1893,6 +1900,7 @@
           <option>Puertas de PVC</option>
           <option>Canceles de Baño</option>
           <option>Divisiones de Oficina</option>
+          <option>Mosquiteros</option>
           <option>Proyecto completo de cancelería</option>
           <option>Proyecto completo</option>
         </select>
@@ -1962,7 +1970,7 @@
 
 <!-- Barra Social -->
 <div class="social-bar" id="socialBar">
-  <a href="https://wa.me/524151182417" target="_blank" rel="noopener" class="social-whatsapp" title="WhatsApp">
+  <a href="https://wa.me/524151399888" target="_blank" rel="noopener" class="social-whatsapp" title="WhatsApp">
     <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
     <span>WhatsApp</span>
   </a>
@@ -2229,7 +2237,7 @@
     if (presupuesto) waMsg += `💰 *Presupuesto:* ${presupuesto}\n`;
     if (mensaje) waMsg += `💬 *Detalles:* ${mensaje}\n`;
     waMsg += `\n_Enviado desde ventanaseuropeassma.com_`;
-    const waURL = `https://wa.me/524151182417?text=${encodeURIComponent(waMsg)}`;
+    const waURL = `https://wa.me/524151399888?text=${encodeURIComponent(waMsg)}`;
     window.open(waURL, '_blank');
     document.getElementById('formSuccess').style.display = 'block';
     form.reset();
@@ -2308,8 +2316,8 @@
       const servicioSelect = document.querySelector('select[name="servicio"]');
       if (servicioSelect) {
         const servOpts = lang === 'en'
-          ? ['Select a service…', 'Windows', 'PVC Doors', 'Bathroom Partitions', 'Office Dividers', 'Full Frame Project', 'Complete Project']
-          : ['Selecciona un servicio…', 'Ventanas', 'Puertas de PVC', 'Canceles de Baño', 'Divisiones de Oficina', 'Proyecto completo de cancelería', 'Proyecto completo'];
+          ? ['Select a service…', 'Windows', 'PVC Doors', 'Bathroom Partitions', 'Office Dividers', 'Mosquito Screens', 'Full Frame Project', 'Complete Project']
+          : ['Selecciona un servicio…', 'Ventanas', 'Puertas de PVC', 'Canceles de Baño', 'Divisiones de Oficina', 'Mosquiteros', 'Proyecto completo de cancelería', 'Proyecto completo'];
         Array.from(servicioSelect.options).forEach((opt, i) => { opt.text = servOpts[i] || opt.text; });
       }
       const presupuestoSelect = document.querySelector('select[name="presupuesto"]');
