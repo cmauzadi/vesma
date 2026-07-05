@@ -933,6 +933,35 @@
     .contact-item-text span { font-size: 1rem; color: var(--dark); font-weight: 400; }
     .contact-item-text a { color: var(--rust); text-decoration: none; }
     .contact-item-text a:hover { text-decoration: underline; }
+
+    /* ── Mapa del showroom ── */
+    .contact-map {
+      margin-top: 2rem;
+      border-radius: 6px;
+      overflow: hidden;
+      border: 1px solid rgba(26, 26, 46, 0.08);
+      box-shadow: 0 4px 20px rgba(26, 26, 46, 0.06);
+    }
+    .contact-map iframe {
+      display: block;
+      width: 100%;
+      height: 240px;
+      border: 0;
+    }
+    .contact-directions {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      margin-top: 1rem;
+      color: var(--rust);
+      font-size: 0.85rem;
+      font-weight: 500;
+      letter-spacing: 0.04em;
+      text-decoration: none;
+      transition: color 0.2s, transform 0.2s;
+    }
+    .contact-directions:hover { color: var(--rust-dark); transform: translateX(2px); }
+
     .contact-form { background: var(--warm); padding: 2.5rem; border-radius: 4px; }
     .contact-form h3 {
       font-family: 'Playfair Display', serif;
@@ -1861,7 +1890,7 @@
       <div class="contact-icon">📍</div>
       <div class="contact-item-text">
         <strong data-es="Ubicación" data-en="Location">Ubicación</strong>
-        <span>San Miguel de Allende, Guanajuato</span>
+        <span data-es="Libramiento Manuel Zavala Zavala 63-B, San Miguel de Allende, Guanajuato, C.P. 37760" data-en="Libramiento Manuel Zavala Zavala 63-B, San Miguel de Allende, Guanajuato, C.P. 37760">Libramiento Manuel Zavala Zavala 63-B, San Miguel de Allende, Guanajuato, C.P. 37760</span>
       </div>
     </div>
     <div class="contact-item">
@@ -1871,6 +1900,18 @@
         <span data-es="Lunes – Sábado, 8:00 am – 6:00 pm" data-en="Monday – Saturday, 8:00 am – 6:00 pm">Lunes – Sábado, 8:00 am – 6:00 pm</span>
       </div>
     </div>
+
+    <!-- Mapa del showroom -->
+    <div class="contact-map">
+      <iframe
+        id="showroomMap"
+        src="https://maps.google.com/maps?q=Libramiento+Manuel+Zavala+Zavala+63-B+San+Miguel+de+Allende+Guanajuato+37760&hl=es&z=16&output=embed"
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        title="Showroom Ventanas Europeas SMA"
+        allowfullscreen></iframe>
+    </div>
+    <a href="https://www.google.com/maps/dir/?api=1&destination=Libramiento+Manuel+Zavala+Zavala+63-B+San+Miguel+de+Allende+Guanajuato+37760" target="_blank" rel="noopener" class="contact-directions" data-es="📍 Cómo llegar al showroom →" data-en="📍 Get directions to showroom →">📍 Cómo llegar al showroom →</a>
   </div>
   <div class="contact-form">
     <h3 data-es="Solicita tu Cotización" data-en="Request a Quote">Solicita tu Cotización</h3>
@@ -1932,7 +1973,6 @@
       <div class="form-group">
         <label data-es="Medidas del espacio" data-en="Space dimensions">Medidas del espacio</label>
         <input type="text" name="medidas" placeholder="Ej: 4m x 3m, o 20 m² aprox." />
-        </select>
       </div>
       <div class="form-group">
         <label data-es="Información adicional" data-en="Additional information">Información adicional</label>
@@ -2311,6 +2351,11 @@
         const html = el.getAttribute('data-' + lang + '-html');
         if (html) el.innerHTML = html;
       });
+      // Cambiar idioma del mapa del showroom
+      const mapFrame = document.getElementById('showroomMap');
+      if (mapFrame) {
+        mapFrame.src = mapFrame.src.replace(/([?&])hl=(es|en)/, '$1hl=' + lang);
+      }
       const placeholders = {
         es: { nombre: 'Tu nombre completo', telefono: '55 0000 0000', ubicacion: 'Colonia, calle o referencia en San Miguel de Allende', medidas: 'Ej: 4m x 3m, o 20 m² aprox.', mensaje: 'Cuéntanos más detalles de tu proyecto…' },
         en: { nombre: 'Your full name', telefono: '55 0000 0000', ubicacion: 'Neighborhood, street or reference in San Miguel de Allende', medidas: 'E.g.: 4m x 3m, or 20 m² approx.', mensaje: 'Tell us more about your project…' }
