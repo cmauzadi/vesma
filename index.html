@@ -1701,6 +1701,18 @@
     <div class="gallery-item">
       <img src="https://lh3.googleusercontent.com/d/1BRcEgbXgiUfip9IXNaej1AfgvzUfOgeg" alt=>
     </div>
+    <div class="gallery-item">
+      <img src="fotos/ventanas-corridas-estudio.jpg" alt="Ventanas corridas en esquina para estudio" data-es-alt="Ventanas corridas en esquina para estudio" data-en-alt="Corner ribbon windows for a home office" loading="lazy">
+    </div>
+    <div class="gallery-item">
+      <img src="fotos/ventana-cocina-esquina.jpg" alt="Ventana abatible de cocina en esquina" data-es-alt="Ventana abatible de cocina en esquina" data-en-alt="Corner casement kitchen window" loading="lazy">
+    </div>
+    <div class="gallery-item">
+      <img src="fotos/ventana-cenital-escalera.jpg" alt="Ventana cenital en cubo de escalera" data-es-alt="Ventana cenital en cubo de escalera" data-en-alt="Skylight window over the stairwell" loading="lazy">
+    </div>
+    <div class="gallery-item">
+      <img src="fotos/fachada-casa-ladrillo.jpg" alt="Fachada residencial con ventanería de aluminio negro" data-es-alt="Fachada residencial con ventanería de aluminio negro" data-en-alt="Residential facade with black aluminum windows" loading="lazy">
+    </div>
   </div>
 
   <div class="gallery-category" data-category="puertas">
@@ -1712,6 +1724,12 @@
     </div>
     <div class="gallery-item">
       <img src="https://lh3.googleusercontent.com/d/1naG_6JmlTv2Te2jQQ-6qFUv_NswyVj_w" alt=>
+    </div>
+    <div class="gallery-item">
+      <img src="fotos/puerta-doble-terraza.jpg" alt="Puerta doble practicable hacia terraza" data-es-alt="Puerta doble practicable hacia terraza" data-en-alt="Double hinged door opening onto the terrace" loading="lazy">
+    </div>
+    <div class="gallery-item">
+      <img src="fotos/puerta-acceso-cristal.jpg" alt="Puerta de acceso en cristal templado" data-es-alt="Puerta de acceso en cristal templado" data-en-alt="Tempered glass entrance door" loading="lazy">
     </div>
   </div>
 
@@ -1728,6 +1746,15 @@
     <div class="gallery-item">
       <img src="https://lh3.googleusercontent.com/d/1e-ZNSe_Abp-TCLOp7mrszYLsyhKVB1vv" alt=>
     </div>
+    <div class="gallery-item">
+      <img src="fotos/ventanal-esquinero-corredizo-jardin.jpg" alt="Ventanal esquinero corredizo con vista al jardín" data-es-alt="Ventanal esquinero corredizo con vista al jardín" data-en-alt="Corner sliding glass wall overlooking the garden" loading="lazy">
+    </div>
+    <div class="gallery-item">
+      <img src="fotos/ventanal-panoramico-sala.jpg" alt="Ventanal panorámico de piso a techo en sala" data-es-alt="Ventanal panorámico de piso a techo en sala" data-en-alt="Floor-to-ceiling panoramic window wall in the living room" loading="lazy">
+    </div>
+    <div class="gallery-item">
+      <img src="fotos/cancel-corredizo-terraza.jpg" alt="Cancel corredizo de piso a techo hacia terraza" data-es-alt="Cancel corredizo de piso a techo hacia terraza" data-en-alt="Floor-to-ceiling sliding partition onto the terrace" loading="lazy">
+    </div>
     <div class="gallery-item gallery-hidden">
       <img src="https://lh3.googleusercontent.com/d/1dvjsyrJH9cWpxNb_rNC78gJRWq2fTcTS" alt=>
     </div>
@@ -1741,6 +1768,9 @@
     </div>
     <div class="gallery-item">
       <img src="https://lh3.googleusercontent.com/d/12_sK-AN_-kTSLrFooI71bpdxAYYvR3v6" alt=>
+    </div>
+    <div class="gallery-item">
+      <img src="fotos/bano-ventana-abatible.jpg" alt="Baño con ventana abatible y cancel de cristal" data-es-alt="Baño con ventana abatible y cancel de cristal" data-en-alt="Bathroom with casement window and glass shower screen" loading="lazy">
     </div>
   </div>
 
@@ -2347,6 +2377,11 @@
       document.querySelectorAll('[data-es-html][data-en-html]').forEach(el => {
         const html = el.getAttribute('data-' + lang + '-html');
         if (html) el.innerHTML = html;
+      });
+      // Textos alternativos de la galería (también se usan como pie de foto en el lightbox)
+      document.querySelectorAll('[data-es-alt][data-en-alt]').forEach(el => {
+        const alt = el.getAttribute('data-' + lang + '-alt');
+        if (alt) el.alt = alt;
       });
       // Cambiar idioma del mapa del showroom
       const mapFrame = document.getElementById('showroomMap');
